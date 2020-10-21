@@ -1,11 +1,13 @@
 /** main **/
 
 html {
-    height: 100%;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
+    min-height: 100%;
 }
 
 img {
@@ -16,26 +18,42 @@ img {
 /** classes **/
 
 .navbar {
-    overflow:hidden;
-    background-color:white;
+    background-color: #ebebeb;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
-    position:fixed;
-    top:0;
-    width:100%;
-    height:60px;
-    z-index:1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    margin: 18px 0 13px 20px;
+    padding-bottom: 5px;
+    font-size: 22px;
+}
+
+.menuIcon {
+    float: right;
+    margin-top: 18px;
+    cursor: pointer;
 }
 
 .divMain {
     display: block;
     position: relative;
     height: 100%;
+    transition: .2s;
 }
 
 .divMain:before {
     /** pseudo element to change background image opacity **/
     content: "";
-    background: url(images/background_main.jpg);
+    background: url(images/background.jpg);
     background-attachment: fixed;
     background-size: cover;
     opacity: 0.65;
@@ -57,7 +75,6 @@ img {
 }
 
 .cardHeader {
-    font-family: 'Roboto', sans-serif;
     font-size: 36px;
     margin: 0;
     text-align: left;
@@ -65,7 +82,6 @@ img {
 }
 
 .cardBody {
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: 0 10px 0 10px;
     text-align: center;
@@ -84,7 +100,6 @@ img {
 
 .tableMain {
     display: grid;
-    grid-template-columns: 30fr 2fr 68fr;
 }
 
 .tableItem {
@@ -100,7 +115,6 @@ img {
 }
 
 .pStandard {
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     margin: 0 10px 0 10px;
     text-align: left;
@@ -152,6 +166,31 @@ ul.pStandard {
     background-color: #d6d6d6;
 }
 
+/** ids **/
+
+#logo {
+    font-size: 36px;
+    margin: 0;
+    text-align: left;
+    padding: 10px 0 10px 15px;
+    transition: .2s;
+}
+
+#sideImg {
+    position: relative;
+    display: inline-block;
+}
+
+#pageName {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
 /** responsive **/
 
 @media all and (max-width: 1000px) {
@@ -167,6 +206,65 @@ ul.pStandard {
     .cardBody {
         padding: 0;
     }
+    .navbar .responsiveSection a {
+        display: none;
+    }
+    .openNav .responsiveSection a:first-child {
+        margin-top: 80px;
+    }
+    .openNav .responsiveSection a {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+    .responsiveSection {
+        position: absolute;
+        width: 35%;
+        height: 100vh;
+        right: 0px;
+        border-radius: 20px;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, .25);
+        padding-right: 100px;
+        background: #ededed;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    .toggleSection {
+        transform: translate(10%, 0);
+    }
+    .menuIcon span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #000000;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+    .closeIcon:first-child {
+        transform: rotate(45deg) translate(1px, -2px);
+    }
+    .closeIcon:nth-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    .closeIcon:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+    .responsiveSection .active {
+        font-weight: bolder;
+    }
+    .tint {
+        opacity: .4;
+        filter: blur(3px);
+    }
+    #pageName {
+        font-size: 10vw;
+    }
 }
 
 @media all and (min-width:1000px) {
@@ -174,12 +272,32 @@ ul.pStandard {
         padding: 0 20px 10px 20px;
     }
     .divider20-10 {
-        height:90px;
+        height: 90px;
     }
     .card {
         margin-bottom: 20px;
     }
     .cardBody {
         padding: 10px;
+    }
+    .navbar a {
+        background: linear-gradient(to right, #bdbdbd, #bdbdbd);
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        transition: background-size .25s ease;
+    }
+    .navbar a:hover {
+        background-size: 100% 3px;
+    }
+    .active {
+        /** try to fix by using default cascading than !important **/
+        background: linear-gradient(to right, #000000, #000000) !important;
+        background-position: bottom left !important;
+        background-repeat: no-repeat !important;
+        background-size: 100% 3px !important;
+    }
+    #pageName {
+        font-size: 120px;
     }
 }

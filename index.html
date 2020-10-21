@@ -20,202 +20,51 @@
 <body>
     <!-- navbar -->
     <div class="navbar">
-        <div class="cardHeader"><b>DENNIS EUM</b>
+        <a id="logo" href="#" style="background:none;"><b>DENNIS EUM</b></a>
+        <div class="responsiveSection">
+            <a href="index.html" class="active">MAIN</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+        <div href="javascript:void(0);" class="menuIcon" style="margin-right:20px;">
+            <!-- css menu icon -->
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 
     <!-- main body -->
     <div class="divMain">
         <div class="divider20-10"></div>
-        <!--
-        <div class="card">
-            <div class="cardHeader"><b>DENNIS EUM</b>
-            </div>
-        </div>-->
         <div class="card">
             <div class="cardBody">
-                <div class="tableMain">
-                    <img src="images/profile_main.jpg" alt="dennis eum" class="tableItem"
-                        style="max-width:100%;max-height:100%;" draggable="false">
-                    <div class="tableItem tableBreak"></div>
-                    <div class="tableItem tableBox">
-                        <!--
-                        <ul class="pStandard">
-                            <li>
-                                <p>STEM-focused student</p>
-                            </li>
-                            <li>
-                                <p>cellist + debater</p>
-                            </li>
-                        </ul>-->
-                        <p class="pStandard">
-                            Hi! I'm currently a high school junior at The Blake School, Minneapolis.
-                        </p>
+                <div class="tableMain" style="grid-template-columns: 68fr 2fr 30fr;">
+                    <div id="sideImg" class="tableItem" style="overflow:hidden;border-radius: 10px;
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);"><img src="images/main_major.png" alt="side abstract"
+                            style="object-fit:cover;max-width:100%;opacity:.7;" draggable="false">
+                        <div id="pageName">MAIN</div>
                     </div>
+                    <div class="tableItem tableBreak"></div>
+                    <img src="images/main_minor.jpg" alt="dennis eum" id="profileImg" class="tableItem"
+                        style="max-width:100%;max-height:100%;" draggable="false">
                 </div>
             </div>
         </div>
-
         <div class="card">
-            <div class="cardHeader"><b>skills</b>
+            <div class="cardHeader"><b>about</b>
+                <p class="pStandard">view a brief interactive résume (full copy is downloadable)</p>
             </div>
         </div>
         <div class="card">
-            <div class="cardBody">
-                <ul class="pStandard">
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;Technical</p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>Web Coding (HTML5, CSS, Javascript <i class="fas fa-long-arrow-alt-right"></i>
-                                        jQuery &amp JS Processing)</p>
-                                </li>
-                                <li>
-                                    <p>Python (fundamentals + data science libraries)</p>
-                                </li>
-                                <li>
-                                    <p>Mathematica (functional programming i.e. higher order functions for data science)
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <p>Excel Programming</p>
-                                </li>
-                                <li>
-                                    <p>Adobe Photoshop &amp Premiere Pro</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;Linguistic</p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>English (native)</p>
-                                </li>
-                                <li>
-                                    <p>Korean (native)</p>
-                                </li>
-                                <li>
-                                    <p>Spanish (advanced)</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cardHeader"><b>experience</b>
+            <div class="cardHeader"><b>portfolio</b>
+                <p class="pStandard">explore my coding, musical, and writing projects</p>
             </div>
         </div>
         <div class="card">
-            <div class="cardBody">
-                <ul class="pStandard">
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;<span class="dates">06/2020
-                                - 08/2020</span> Linear Algebra &amp Differential Equations @ University of Minnesota
-                        </p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>Learned linear algebra and differential equations as accelerated summer
-                                        coursework</p>
-                                </li>
-                                <li>
-                                    <p>Explored physical applications of linear algebra</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;<span class="dates">06/2019
-                                - 09/2019</span> Augment Data Science Programming Internship</p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>Learned Mathematica programming language</p>
-                                </li>
-                                <li>
-                                    <p>Visualized and analyzed data on topics of interest, such as number of disease
-                                        cases by geography</p>
-                                </li>
-                                <li>
-                                    <p>Was introduced some machine learning techniques and applied to basic scenarios
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;<span class="dates">09/2018
-                                - 08/2019</span> Teaching Assistant for Korean Language Classes</p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>Weekly volunteering at a local Minnesota church</p>
-                                </li>
-                                <li>
-                                    <p>Helped manage and teach elementary and middle school students learn Korean</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <p class="toggle"><i class="fas fa-chevron-down"></i>&nbsp;&nbsp;<span class="dates">09/2016
-                                - 05/2019</span> University of Minnesota Talented Youth Math Program</p>
-                        <div class="descItem">
-                            <ul>
-                                <li>
-                                    <p>Accelerated math classes at the University of Minnesota for secondary school
-                                        students</p>
-                                </li>
-                                <li>
-                                    <p>Took Algebra I &amp II, Geometry, Math Analysis, and Calculus I (AP Calculus
-                                        AB/BC)</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="cardHeader"><b>cello awards</b>
-            </div>
-        </div>
-        <div class="card">
-            <div class="cardBody">
-                <ul class="pStandard">
-                    <li>
-                        <p><span class="dates">03/08/2020</span> YPSCA winner (Karen Lundmark Holmes Award)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">02/29/2020</span> Thursday Musical High School Division (1st place)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">02/16/2020</span> Salon Se Leve Solo Concerto Performing Invitation</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">01/15/2020</span> Classical MPR Varsity Competition (Semi-finalist)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">11/10/2019</span> Mary West High School Division (1st place)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">02/29/2019</span> Thursday Musical Junior High Division (2nd place)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">02/29/2019</span> Schubert Club Junior High Division (1st place)</p>
-                    </li>
-                    <li>
-                        <p><span class="dates">11/16/2018</span> Mary West Junior High Division (1st place)</p>
-                    </li>
-                </ul>
+            <div class="cardHeader"><b>contact</b>
+                <p class="pStandard">find an easy way to communicate with me</p>
             </div>
         </div>
 
@@ -225,12 +74,21 @@
                 $(".card").hide();
                 $(".card").fadeTo(1500, 1);
 
+                // general design
                 $(".descItem").hide();
+                $("#sideImg").height($("#profileImg").height());
 
-                // toggle description (make more efficient later)
-                $(".toggle").click(function () {
-                    $(this).next(".descItem").fadeToggle(300);
-                    $(this).children(".fas").toggleClass("fa-rotate-180");
+                $(window).resize(function () {
+                    $("#sideImg").height($("#profileImg").height());
+                });
+
+                // navbar responsive
+                $(".menuIcon").click(function () {
+                    $(".navbar").toggleClass("openNav");
+                    $(".responsiveSection").toggleClass("toggleSection");
+                    $(".divMain").toggleClass("tint");
+                    $("#logo").toggleClass("tint");
+                    $(".menuIcon span").toggleClass("closeIcon");
                 });
             });
         </script>
