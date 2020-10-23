@@ -1,13 +1,11 @@
 /** main **/
 
-html {
+html, body {
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
-}
-
-body {
     margin: 0;
-    min-height: 100%;
+    overflow: auto;
+    height: 100%;
 }
 
 img {
@@ -18,13 +16,20 @@ img {
 /** classes **/
 
 .navbar {
-    background-color: #ebebeb;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
     z-index: 1;
+}
+
+.navDesign {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #ebebeb;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
+    z-index: -1;
 }
 
 .navbar a {
@@ -45,7 +50,6 @@ img {
 
 .divMain {
     display: block;
-    position: relative;
     height: 100%;
     transition: .2s;
 }
@@ -74,6 +78,14 @@ img {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
 }
 
+.tableCard {
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
+}
+
 .cardHeader {
     font-size: 36px;
     margin: 0;
@@ -81,10 +93,27 @@ img {
     padding: 10px 0 10px 15px;
 }
 
+.cardHeader a {
+    text-decoration: none;
+    color: black;
+}
+
+.cardHeader .fas {
+    position: relative;
+    top: -1px;
+    font-size: 26px;
+}
+
+.cardSub {
+    font-size: 30px;
+    margin: 0;
+    text-align: left;
+    padding: 10px 0 0 15px;
+}
+
 .cardBody {
     font-size: 18px;
     margin: 0 10px 0 10px;
-    text-align: center;
 }
 
 .progress {
@@ -100,6 +129,7 @@ img {
 
 .tableMain {
     display: grid;
+    margin: auto;
 }
 
 .tableItem {
@@ -155,15 +185,29 @@ ul.pStandard {
 .dates {
     display: inline-block;
     padding: .25em .4em;
-    font-size: 75%;
+    font-size: small;
     font-weight: 700;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
-    vertical-align: baseline;
+    vertical-align: middle;
     border-radius: .25rem;
     color: rgb(0, 0, 0);
     background-color: #d6d6d6;
+}
+
+.posttype {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: small;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: .25rem;
+    color: rgb(0, 0, 0);
+    background-color: #a8ff97;
 }
 
 /** ids **/
@@ -197,10 +241,13 @@ ul.pStandard {
     .divMain {
         padding: 0 10px 5px 10px;
     }
-    .divider20-10 {
+    .navSpacer {
         height: 80px;
     }
-    .card {
+    .divider20-10 {
+        height: 10px;
+    }
+    .card, #gallery {
         margin-bottom: 10px;
     }
     .cardBody {
@@ -271,10 +318,13 @@ ul.pStandard {
     .divMain {
         padding: 0 20px 10px 20px;
     }
-    .divider20-10 {
+    .navSpacer {
         height: 90px;
     }
-    .card {
+    .divider20-10 {
+        height: 20px;
+    }
+    .card, #gallery {
         margin-bottom: 20px;
     }
     .cardBody {

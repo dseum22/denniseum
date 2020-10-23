@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HOME</title>
+    <title>PORTFOLIO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- external stylesheets -->
@@ -23,9 +23,9 @@
         <div class="navDesign"></div>
         <a id="logo" href="#" style="background:none;"><b>DENNIS EUM</b></a>
         <div class="responsiveSection">
-            <a href="index.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
-            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="portfolio.html" class="active">PORTFOLIO</a>
             <a href="contact.html">CONTACT</a>
         </div>
         <div href="javascript:void(0);" class="menuIcon" style="margin-right:20px;">
@@ -43,21 +43,40 @@
             <div class="cardBody">
                 <div class="tableMain" style="grid-template-columns: 68fr 2fr 30fr;">
                     <div id="sideImg" class="tableItem" style="overflow:hidden;border-radius: 10px;
-                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);"><img src="images/main_major.png" alt="side abstract"
-                            style="object-fit:cover;max-width:100%;opacity:.7;" draggable="false">
-                        <div id="pageName">MAIN</div>
+                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);"><img src="images/portfolio_major.png"
+                            alt="side abstract" style="object-fit:cover;max-width:100%;opacity:.7;" draggable="false">
+                        <div id="pageName">PORTFOLIO</div>
                     </div>
                     <div class="tableItem tableBreak"></div>
-                    <img src="images/main_minor.jpg" alt="dennis eum" id="profileImg" class="tableItem"
+                    <img src="images/portfolio_minor.jpg" alt="dennis eum" id="profileImg" class="tableItem"
                         style="max-width:100%;max-height:100%;" draggable="false">
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="cardHeader"><a href="about.html"><b>about <i class="fas fa-chevron-right"></i></b></a>
-                <p class="pStandard">view a brief interactive résume</p>
+
+
+        <div id="gallery" class="tableMain" style="max-width:1000px;grid-template-columns: 38fr 2fr 60fr;width: 100%;">
+            <div class="tableCard">
+                <div class="cardSub">Disease Data Visualization</div>
+                <div class="cardBody"><span class="dates">2019</span>&nbsp;<span
+                        class="posttype">Coding (Mathematica)</span>&nbsp;This program imported an international disease database
+                    to visualize the frequency of disease in different countries. Mathematica's GUI features such as tab
+                    control were also used to organize the visualizations. This allows easy comparisons between disease
+                    frequencies in each country.</div>
+            </div>
+            <div class="tableItem tableBreak"></div>
+            <div class="tableCard">
+
+                <div class="cardBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
             </div>
         </div>
+
+
+
         <div class="card">
             <div class="cardHeader">
                 <a href="portfolio.html"><b>portfolio <i class="fas fa-chevron-right"></i></b></a>

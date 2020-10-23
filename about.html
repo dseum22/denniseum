@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>ABOUT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- external stylesheets -->
@@ -20,9 +20,10 @@
 <body>
     <!-- navbar -->
     <div class="navbar">
+        <div class="navDesign"></div>
         <a id="logo" href="#" style="background:none;"><b>DENNIS EUM</b></a>
         <div class="responsiveSection">
-            <a href="index.html">MAIN</a>
+            <a href="index.html">HOME</a>
             <a href="about.html" class="active">ABOUT</a>
             <a href="portfolio.html">PORTFOLIO</a>
             <a href="contact.html">CONTACT</a>
@@ -37,7 +38,7 @@
 
     <!-- main body -->
     <div class="divMain">
-        <div class="divider20-10"></div>
+        <div class="navSpacer"></div>
         <div class="card">
             <div class="cardBody">
                 <div class="tableMain" style="grid-template-columns: 30fr 2fr 68fr;">
@@ -215,7 +216,7 @@
                 </ul>
             </div>
         </div>
-
+        <div class="divider20-10"></div>
         <script>
             $(document).ready(function () {
                 // initial animation
@@ -234,8 +235,7 @@
                 $(".menuIcon").click(function () {
                     $(".navbar").toggleClass("openNav");
                     $(".responsiveSection").toggleClass("toggleSection");
-                    $(".divMain").toggleClass("tint");
-                    $("#logo").toggleClass("tint");
+                    $(".divMain, .navDesign, #logo").toggleClass("tint");
                     $(".menuIcon span").toggleClass("closeIcon");
                 });
 
