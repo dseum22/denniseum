@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HOME</title>
+    <title>CONTACT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- external stylesheets -->
@@ -23,10 +23,10 @@
         <div class="navDesign"></div>
         <a id="logo" href="#" style="background:none;"><b>DENNIS EUM</b></a>
         <div class="responsiveSection">
-            <a href="index.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
             <a href="portfolio.html">PORTFOLIO</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="contact.html" class="active">CONTACT</a>
         </div>
         <div href="javascript:void(0);" class="menuIcon" style="margin-right:20px;">
             <!-- css menu icon -->
@@ -41,35 +41,22 @@
         <div class="navSpacer"></div>
         <div class="card">
             <div class="cardBody">
-                <div class="tableMain" style="grid-template-columns: 68fr 2fr 30fr;">
-                    <div class="tableItem major">
-                        <div class="img chill" style="background-image:url('images/main_major.png');">
+                <div class="tableMain" style="grid-template-columns: 30fr 2fr 68fr;">
+                    <div class="tableItem minor">
+                        <div class="img" style="background-image:url('images/about_profile.jpg');">
                         </div>
-                        <div id="pageName">MAIN</div>
+
                     </div>
                     <div class="tableBreak"></div>
-                    <div class="tableItem minor">
-                        <div class="img" style="background-image:url('images/main_minor.jpg');"></div>
+                    <div class="tableItem major">
+                        <div class="img chill" style="background-image:url('images/contact_major.png');"></div>
+                        <div id="pageName">CONTACT</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="cardHeader"><a href="about.html"><b>about <i class="fas fa-chevron-right"></i></b></a>
-                <p class="pStandard">view a brief interactive résume</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="cardHeader">
-                <a href="portfolio.html"><b>portfolio <i class="fas fa-chevron-right"></i></b></a>
-                <p class="pStandard">explore my coding, musical, and photography projects</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="cardHeader"><a href="contact.html"><b>contact <i class="fas fa-chevron-right"></i></b></a>
-                <p class="pStandard">find a way to communicate with me</p>
-            </div>
-        </div>
+
+
         <div class="divider20-10"></div>
         <script>
             $(document).ready(function () {
@@ -92,6 +79,12 @@
                     $(".responsiveSection").toggleClass("toggleSection");
                     $(".divMain, .navDesign, #logo").toggleClass("tint");
                     $(".menuIcon span").toggleClass("closeIcon");
+                });
+
+                // toggle description (make more efficient later)
+                $(".toggle").click(function () {
+                    $(this).next(".descItem").fadeToggle(300);
+                    $(this).children(".fas").toggleClass("fa-rotate-180");
                 });
             });
         </script>

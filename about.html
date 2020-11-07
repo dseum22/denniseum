@@ -42,12 +42,14 @@
         <div class="card">
             <div class="cardBody">
                 <div class="tableMain" style="grid-template-columns: 30fr 2fr 68fr;">
-                    <img src="images/about_profile.jpg" alt="dennis eum" id="profileImg" class="tableItem"
-                        style="max-width:100%;max-height:100%;" draggable="false">
-                    <div class="tableItem tableBreak"></div>
-                    <div id="sideImg" class="tableItem" style="overflow:hidden;border-radius: 10px;
-                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);"><img src="images/about_major.png"
-                            alt="side abstract" style="object-fit:cover;max-width:100%;opacity:.7;" draggable="false">
+                    <div class="tableItem minor">
+                        <div class="img" style="background-image:url('images/about_profile.jpg');">
+                        </div>
+
+                    </div>
+                    <div class="tableBreak"></div>
+                    <div class="tableItem major">
+                        <div class="img chill" style="background-image:url('images/about_major.png');"></div>
                         <div id="pageName">ABOUT</div>
                     </div>
                 </div>
@@ -225,10 +227,11 @@
 
                 // general design
                 $(".descItem").hide();
-                $("#sideImg").height($("#profileImg").height());
+                $(".minor").height($(".minor").width());
 
                 $(window).resize(function () {
-                    $("#sideImg").height($("#profileImg").height());
+                    // figure out how to not use this function
+                    $(".minor").height($(".minor").width());
                 });
 
                 // navbar responsive

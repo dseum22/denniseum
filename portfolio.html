@@ -42,14 +42,15 @@
         <div class="card">
             <div class="cardBody">
                 <div class="tableMain" style="grid-template-columns: 68fr 2fr 30fr;">
-                    <div id="sideImg" class="tableItem" style="overflow:hidden;border-radius: 10px;
-                    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);"><img src="images/portfolio_major.png"
-                            alt="side abstract" style="object-fit:cover;max-width:100%;opacity:.7;" draggable="false">
+                    <div class="tableItem major">
+                        <div class="img chill" style="background-image:url('images/portfolio_major.png');">
+                        </div>
                         <div id="pageName">PORTFOLIO</div>
                     </div>
-                    <div class="tableItem tableBreak"></div>
-                    <img src="images/portfolio_minor.jpg" alt="dennis eum" id="profileImg" class="tableItem"
-                        style="max-width:100%;max-height:100%;" draggable="false">
+                    <div class="tableBreak"></div>
+                    <div class="tableItem minor">
+                        <div class="img" style="background-image:url('images/portfolio_minor.jpg');"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,11 +59,13 @@
         <div id="gallery" class="tableMain" style="max-width:1000px;grid-template-columns: 38fr 2fr 60fr;width: 100%;">
             <div class="tableCard">
                 <div class="cardSub">Disease Data Visualization</div>
-                <div class="cardBody"><span class="dates">2019</span>&nbsp;<span
-                        class="posttype">Coding (Mathematica)</span>&nbsp;This program imported an international disease database
+                <div class="cardBody"><span class="dates">2019</span>&nbsp;<span class="posttype">Coding
+                        (Mathematica)</span>&nbsp;This program imported an international disease database
                     to visualize the frequency of disease in different countries. Mathematica's GUI features such as tab
                     control were also used to organize the visualizations. This allows easy comparisons between disease
-                    frequencies in each country.</div>
+                    frequencies in each country.
+                    <button class="viewButton">view module <i class="fas fa-external-link-alt"></i></button>
+                </div>
             </div>
             <div class="tableItem tableBreak"></div>
             <div class="tableCard">
@@ -94,13 +97,13 @@
                 // initial animation
                 $(".card").hide();
                 $(".card").fadeTo(1500, 1);
-
                 // general design
                 $(".descItem").hide();
-                $("#sideImg").height($("#profileImg").height());
+                $(".minor").height($(".minor").width());
 
                 $(window).resize(function () {
-                    $("#sideImg").height($("#profileImg").height());
+                    // figure out how to not use this function
+                    $(".minor").height($(".minor").width());
                 });
 
                 // navbar responsive
