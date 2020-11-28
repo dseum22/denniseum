@@ -1,0 +1,201 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(images/background.png);
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 26px;
+}
+
+.navbar {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .25);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    transition: background-size .25s ease;
+    padding: 0;
+    margin: .5rem 1rem;
+}
+
+.nav-item.active .nav-link {
+    font-size: 20px;
+    background: linear-gradient(to right, #000000, #000000);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+}
+
+.nav-item:not(.active) .nav-link {
+    font-size: 20px;
+    background: linear-gradient(to right, #bdbdbd, #bdbdbd);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+}
+
+.nav-item:not(.active) .nav-link:hover {
+    color: rgb(0, 0, 0);
+    background-size: 100% 3px;
+}
+
+.navbar-toggler {
+    border: none;
+    z-index: 1;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000000;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+.navbar-toggler:hover {
+    cursor: pointer;
+}
+
+[data-toggle="collapse"][aria-expanded="true"]>span:nth-child(1) {
+    -webkit-transform: rotate(45deg) translate(1px, -2px);
+    -moz-transform: rotate(45deg) translate(1px, -2px);
+    -ms-transform: rotate(45deg) translate(1px, -2px);
+    -o-transform: rotate(45deg) translate(1px, -2px);
+    transform: rotate(45deg) translate(1px, -2px);
+}
+
+[data-toggle="collapse"][aria-expanded="true"]>span:nth-child(2) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+    -moz-transform: rotate(0deg) scale(0.2, 0.2);
+    -ms-transform: rotate(0deg) scale(0.2, 0.2);
+    -o-transform: rotate(0deg) scale(0.2, 0.2);
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+[data-toggle="collapse"][aria-expanded="true"]>span:nth-child(3) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+    -moz-transform: rotate(-45deg) translate(0, -1px);
+    -ms-transform: rotate(-45deg) translate(0, -1px);
+    -o-transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.container-md {
+    padding-top: 85px;
+}
+
+.custom-card {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .25);
+}
+
+.ul-none {
+    padding: 0;
+    list-style: none;
+}
+
+.li-toggler {
+    margin-bottom: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.li-toggler:hover {
+    cursor: pointer;
+}
+
+.li-desc {
+    display: none;
+    font-style: italic;
+}
+
+.li-desc>ul>li, .ul-none>li {
+    margin-bottom: 10px;
+}
+
+.fas {
+    transition: .3s;
+}
+
+.img.chill {
+    opacity: .7;
+}
+
+.minor, .major {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.major-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.btn-light {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
+}
+
+@media (max-width: 992px) {
+    #navbarNav {
+        position: absolute;
+        top: 0;
+        right: -30px;
+        width: 300px;
+        height: 100vh;
+        border-radius: 20px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+        background: #ededed;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
+        transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    #navbarNav.show {
+        transform: translate(10%, 0);
+    }
+    .collapsing {
+        transition: height none;
+    }
+    .navbar-expand-lg .navbar-nav .nav-item:nth-child(1) .nav-link {
+        margin-top: 50px;
+    }
+    .navbar-brand, .divMain {
+        transition: filter .3s linear;
+    }
+    .tint:not(.navbar) {
+        opacity: .8;
+        filter: blur(3px);
+    }
+    .navbar.tint {
+        box-shadow: none;
+    }
+    .col-8, .col-4 {
+        padding: 5px;
+    }
+}
