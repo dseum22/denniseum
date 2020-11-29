@@ -112,7 +112,7 @@
         $(document).ready(function () {
             // set copyright year
             $('#year').text(new Date().getFullYear());
-            
+
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');
@@ -128,10 +128,10 @@
             var forms = document.getElementsByClassName('needs-validation');
             var validation = Array.prototype.filter.call(forms, function (form) {
                 form.addEventListener('submit', function (event) {
+                    checkCode();
                     if (form.checkValidity() === false) {
                         event.preventDefault();
                         event.stopPropagation();
-                        runFormScript();
                     } else {
                         event.preventDefault();
                         runFormScript();
@@ -160,43 +160,49 @@
 
         function runFormScript() {
             // gapps jquery code
-            if ((verifyset[0] * verifyset[1]) == parseInt($('#verifycode').val())) {
-                $('#verifycode')[0].setCustomValidity('');
-                $('#sendMsgFields').prop('disabled', true);
-                $('#submit-btn').html('<div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div>');
-                let data = {
-                    firstname: $('#firstname').val(),
-                    lastname: $('#lastname').val(),
-                    email: $('#email').val(),
-                    msg: $('#msg').val()
-                };
-                let url = 'https://script.google.com/macros/s/AKfycbwkumWHfN4lYKrulteTtmqaSd8JcBvzrLpcfb_S7I0Y2fbd7Kgt/exec';
-                fetch(url, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    cache: 'no-cache',
-                    credentials: 'omit',
-                    redirect: 'follow',
-                    body: JSON.stringify(data),
-                    headers: { 'Content-Type': 'application/json' }
-                }).then(response => {
-                    formAlert(['success', 'Success: The response was submitted!']);
-                    // reset form
-                    $('#sendMsg').trigger('reset').removeClass('was-validated');
-                    verifyset = reloadVerification();
-                    $('#sendMsgFields').prop('disabled', false);
-                    $('#submit-btn').html('Send email');
-                }).catch(err => {
-                    formAlert(['danger', `Error: ${err}`]);
-                    $('#sendMsgFields').prop('disabled', false);
-                    $('#submit-btn').html('Send email');
-                });
-            } else {
-                $('#verifycode')[0].setCustomValidity('Invalid.');
+            $('#verifycode')[0].setCustomValidity('');
+            $('#sendMsgFields').prop('disabled', true);
+            $('#submit-btn').html('<div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div>');
+            let data = {
+                firstname: $('#firstname').val(),
+                lastname: $('#lastname').val(),
+                email: $('#email').val(),
+                msg: $('#msg').val()
+            };
+            let url = 'https://script.google.com/macros/s/AKfycbwkumWHfN4lYKrulteTtmqaSd8JcBvzrLpcfb_S7I0Y2fbd7Kgt/exec';
+            fetch(url, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                credentials: 'omit',
+                redirect: 'follow',
+                body: JSON.stringify(data),
+                headers: { 'Content-Type': 'application/json' }
+            }).then(response => {
+                formAlert(['success', 'Success: The response was submitted!']);
+                // reset form
+                $('#sendMsg').trigger('reset').removeClass('was-validated');
+                verifyset = reloadVerification();
+                $('#sendMsgFields').prop('disabled', false);
+                $('#submit-btn').html('Send email');
+            }).catch(err => {
+                formAlert(['danger', `Error: ${err}`]);
+                $('#sendMsgFields').prop('disabled', false);
+                $('#submit-btn').html('Send email');
+            });
+        }
+
+        function checkCode() {
+            let verifycode = $('#verifycode');
+
+            if ((verifyset[0] * verifyset[1]) == parseInt(verifycode.val())) {
+                verifycode[0].setCustomValidity("");
+            }
+            else {
+                verifycode[0].setCustomValidity('Invalid.');
                 formAlert(['danger', 'Error: Verification was unsuccessful. Please check your math again.']);
             }
         }
-
     </script>
 </body>
 
