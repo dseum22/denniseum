@@ -137,16 +137,19 @@ body {
     transition: .3s;
 }
 
-.img.chill {
-    opacity: .7;
-}
-
-.minor, .major {
-    overflow: hidden;
+.img {
+    width: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
+.major.chill {
+    opacity: .7;
+}
 
+.minor {
+    height: 100%;
+}
 
 .major-title {
     position: absolute;
@@ -162,15 +165,8 @@ body {
 .btn-light {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
 }
-@media (min-width: 992px) {
-    .major {
-        height: 94.3032314%;
-    }
-}
+
 @media (max-width: 992px) {
-    .major {
-        height: 97.2%;
-    }
     #navbarNav {
         position: absolute;
         top: 0;

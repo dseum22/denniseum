@@ -22,6 +22,7 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fdddb9628d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.2.0/dist/amplitude.js"></script>
 </head>
 
 <body>
@@ -55,51 +56,26 @@
     <!-- main body -->
     <div class="container-md">
         <div class="card custom-card">
-            <div class="card-body row">
+            <div class="card-body row row-eq-height">
                 <div class="col-8">
-                    <div class="major">
-                        <h1 class="major-title">PORTFOLIO</h1>
-                        <img src="images/portfolio_major.jpg" class="img img-fluid chill" alt="Responsive image">
-                    </div>
+                    <h1 class="major-title">PORTFOLIO</h1>
+                    <img src="images/portfolio_major.jpg" class="img img-fluid major chill" alt="abstract image">
                 </div>
                 <div class="col-4">
-                    <div class="minor"><img src="images/portfolio_minor.jpg" class="img img-fluid"
-                            alt="Responsive image">
-                    </div>
+                    <img src="images/portfolio_minor.jpg" class="img img-fluid minor" alt="dennis eum's cat photo">
                 </div>
+            </div>
+        </div>
+
+        <!-- section - programming/design -->
+        <div class="card custom-card">
+            <div class="card-body">
+                <h3 class="card-title">Programming/Design</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md">
-                <div class="card custom-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Disease Data Visualization</h5>
-                        <p class="card-text">
-                            <span class="badge badge-secondary">2019 Summer</span>
-                            This program imported an international disease database to visualize the frequency of
-                            disease in different countries. Mathematica's GUI features such as tab control were also
-                            used to organize the visualizations. This allows easy comparisons between disease
-                            frequencies in each country.
-                        </p>
-                    </div>
-                </div>
-                <div class="card custom-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Cold Emailing Script</h5>
-                        <p class="card-text">
-                            <span class="badge badge-secondary">2020 Fall</span>
-                            This is a Google Apps script based program (it is based on JS with Google Apps specific
-                            functions included). With a given Google spreadsheet acting as a database of potential
-                            schools who might be interested (in a single, local area) in the <a
-                                href="https://www.roboticsforall.net" target="_blank">Robotics For All</a> services, the
-                            program automatically goes through and automatically sends the correct email depending on
-                            the school's grade level. This required some knowledge about GApps script functions and JS
-                            for spreadsheet scripting.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
+                <!-- card - scheduling website -->
                 <div class="card custom-card">
                     <div class="card-body">
                         <h5 class="card-title">Scheduling Website</h5>
@@ -117,21 +93,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="card custom-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Railfence Cypher</h5>
-                        <p class="card-text">
-                            <span class="badge badge-secondary">2019 Summer</span>
-                            This was one of my favorite Python projects. I created an algorithm to encode and decode a
-                            railfence cypher of any rail (as long as the rail is known). A sample copy of the algorithm
-                            is <a href="files/railfence-cypher.py">here</a>. While I did begin creating a GUI for this
-                            with tkinter, school started up so I left it in an unfinished state for the future (sample
-                            <a href="files/railfence-cypher-gui.py">here</a>).
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
+                <!-- card - personal website -->
                 <div class="card custom-card">
                     <div class="card-body">
                         <h5 class="card-title">Personal Website</h5>
@@ -147,6 +109,55 @@
                         </p>
                     </div>
                 </div>
+
+            </div>
+            <div class="col-md">
+                <!-- card - disease data visualization -->
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Disease Data Visualization</h5>
+                        <p class="card-text">
+                            <span class="badge badge-secondary">2019 Summer</span>
+                            This program imported an international disease database to visualize the frequency of
+                            disease in different countries. Mathematica's GUI features such as tab control were also
+                            used to organize the visualizations. This allows easy comparisons between disease
+                            frequencies in each country.
+                        </p>
+                    </div>
+                </div>
+                <!-- card - cold emailing script -->
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cold Emailing Script</h5>
+                        <p class="card-text">
+                            <span class="badge badge-secondary">2020 Fall</span>
+                            This is a Google Apps script based program (it is based on JS with Google Apps specific
+                            functions included). With a given Google spreadsheet acting as a database of potential
+                            schools who might be interested (in a single, local area) in the <a
+                                href="https://www.roboticsforall.net" target="_blank">Robotics For All</a> services, the
+                            program automatically goes through and automatically sends the correct email depending on
+                            the school's grade level. This required some knowledge about GApps script functions and JS
+                            for spreadsheet scripting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <!-- card - railfence cypher -->
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Railfence Cypher</h5>
+                        <p class="card-text">
+                            <span class="badge badge-secondary">2019 Summer</span>
+                            This was one of my favorite Python projects. I created an algorithm to encode and decode a
+                            railfence cypher of any rail (as long as the rail is known). A sample copy of the algorithm
+                            is <a href="files/railfence-cypher.py">here</a>. While I did begin creating a GUI for this
+                            with tkinter, school started up so I left it in an unfinished state for the future (sample
+                            <a href="files/railfence-cypher-gui.py">here</a>).
+                        </p>
+                    </div>
+                </div>
+                <!-- card - spotify playlist covers -->
                 <div class="card custom-card">
                     <div class="card-body">
                         <h5 class="card-title">Spotify Playlist Covers</h5>
@@ -163,6 +174,13 @@
                 </div>
             </div>
         </div>
+
+        <!-- section - music -->
+        <div class="card custom-card">
+            <div class="card-body">
+                <h3 class="card-title">Music</h3>
+            </div>
+        </div>
         <p class="text-center mt-5 mb-3 text-muted">dennis eum &copy; <span id="year"></span></p>
         <div style="padding-bottom: 10px;"></div>
     </div>
@@ -170,7 +188,7 @@
         $(document).ready(function () {
             // set copyright year
             $('#year').text(new Date().getFullYear());
-            
+
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');

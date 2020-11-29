@@ -57,16 +57,14 @@
     <!-- main body -->
     <div class="container-md">
         <div class="card custom-card">
-            <div class="card-body row">
+            <div class="card-body row row-eq-height">
                 <div class="col-8">
-                    <div class="major">
-                        <h1 class="major-title">HOME</h1>
-                        <img src="images/main_major.jpg" class="img img-fluid chill" alt="Responsive image">
-                    </div>
+                    <h1 class="major-title">HOME</h1>
+                    <img src="images/home_major.jpg" class="img img-fluid major chill" alt="abstract image">
                 </div>
                 <div class="col-4">
-                    <div class="minor"><img src="images/main_minor.jpg" class="img img-fluid" alt="Responsive image">
-                    </div>
+                    <img src="images/home_minor.jpg" class="img img-fluid minor"
+                        alt="dennis eum's boundary waters photo">
                 </div>
             </div>
         </div>
@@ -102,12 +100,6 @@
     </div>
     <script>
         $(document).ready(function () {
-            //resize top images
-            /**$('.major').height($('.minor').height());
-            $(window).resize(function () {
-                //figure out how to not use this function
-                $('.major').height($('.minor').height());
-            });**/
             // set copyright year
             $('#year').text(new Date().getFullYear());
 
