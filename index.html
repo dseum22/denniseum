@@ -3,7 +3,7 @@
 
 <head>
     <title>HOME</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- external stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
@@ -11,8 +11,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- main stylesheet -->
-    <!-- <link rel="stylesheet" href="main.css"> -->
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="main.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -99,17 +98,17 @@
     <script>
         $(document).ready(function () {
             //resize top images
-            $('.major').height($('.minor').height());
+            /**$('.major').height($('.minor').height());
             $(window).resize(function () {
                 //figure out how to not use this function
                 $('.major').height($('.minor').height());
-            });
+            });**/
 
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');
             });
-            
+
             // toggle card lists
             $(".li-toggler").click(function () {
                 $(this).next(".li-desc").fadeToggle(300);

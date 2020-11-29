@@ -3,7 +3,7 @@
 
 <head>
     <title>PORTFOLIO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- external stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
@@ -11,8 +11,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- main stylesheet -->
-    <!-- <link rel="stylesheet" href="main.css"> -->
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="main.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -123,9 +122,9 @@
                             <span class="badge badge-secondary">2019 Summer</span>
                             This was one of my favorite Python projects. I created an algorithm to encode and decode a
                             railfence cypher of any rail (as long as the rail is known). A sample copy of the algorithm
-                            is <a href="files/Railfence Cypher.py">here</a>. While I did begin creating a GUI for this
+                            is <a href="files/railfence-cypher.py">here</a>. While I did begin creating a GUI for this
                             with tkinter, school started up so I left it in an unfinished state for the future (sample
-                            <a href="files/Railfence Cypher GUI.py">here</a>).
+                            <a href="files/railfence-cypher-gui.py">here</a>).
                         </p>
                     </div>
                 </div>
@@ -156,7 +155,7 @@
                             playlist's songs' album arts and often looks disjointed. I used Photoshop to make vectors of
                             icons and create covers with clean pastel colors. The treble clef icon was difficult to
                             make, so I resourced it online. A sample zip of the covers is <a
-                                href="files/spotify playlist covers.zip">here</a>.
+                                href="files/spotify-playlist-covers.zip">here</a>.
                         </p>
                     </div>
                 </div>
@@ -166,13 +165,6 @@
     </div>
     <script>
         $(document).ready(function () {
-            //resize top images
-            $('.major').height($('.minor').height());
-            $(window).resize(function () {
-                //figure out how to not use this function
-                $('.major').height($('.minor').height());
-            });
-
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');

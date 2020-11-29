@@ -3,7 +3,7 @@
 
 <head>
     <title>CONTACT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- external stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
@@ -11,8 +11,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- main stylesheet -->
-    <!-- <link rel="stylesheet" href="main.css"> -->
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="main.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -69,42 +68,48 @@
         </div>
         <div class="card custom-card">
             <div class="card-body">
-                <h5 class="card-title"><a class="btn btn-light" href="about.html">about <i
-                            class="fas fa-chevron-right"></i></a></h5>
+                <h5 class="card-title">Send a message:</h5>
                 <p class="card-text">
-                    view a brief, interactive résumé
-                </p>
-            </div>
-        </div>
-        <div class="card custom-card">
-            <div class="card-body">
-                <h5 class="card-title"><a class="btn btn-light" href="portfolio.html">portfolio <i
-                            class="fas fa-chevron-right"></i></a></h5>
-                <p class="card-text">
-                    explore my coding and design projects
-                </p>
-            </div>
-        </div>
-        <div class="card custom-card">
-            <div class="card-body">
-                <h5 class="card-title"><a class="btn btn-light" href="contact.html">contact <i
-                            class="fas fa-chevron-right"></i></a></h5>
-                <p class="card-text">
-                    find a way to communicate with me
+                <form class="needs-validation" id="sendMsg" novalidate>
+                    <div class="form-row">
+                        <div class="col-md">
+                            <label for="firstname">First name</label>
+                            <input type="text" class="form-control" id="firstname" value="" required>
+                        </div>
+                        <div class="col-md">
+                            <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" id="lastname" value="" required>
+                        </div>
+                        <div class="col-md">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="msg">Message</label>
+                            <textarea class="form-control" id="msg" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-3 mb-3">
+                            <label id="verifyset" for="verifycode"></label>
+                            <input type="text" class="form-control" id="verifycode" value="" required>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label>Check verification and submit</label>
+                            <button class="btn btn-primary" type="submit">Send email</button>
+                        </div>
+                    </div>
+                </form>
                 </p>
             </div>
         </div>
         <div style="padding-bottom: 10px;"></div>
     </div>
     <script>
+        // JQuery
         $(document).ready(function () {
-            //resize top images
-            $('.major').height($('.minor').height());
-            $(window).resize(function () {
-                //figure out how to not use this function
-                $('.major').height($('.minor').height());
-            });
-
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');
@@ -115,7 +120,77 @@
                 $(this).next(".li-desc").fadeToggle(300);
                 $(this).children(".fas").toggleClass("fa-rotate-180");
             });
+
+            // setup form
+            let verifyset = reloadVerification();
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        // gapps jquery code
+                        event.preventDefault();
+                        console.log(verifyset[0] * verifyset[1]);
+                        if ((verifyset[0] * verifyset[1]) == parseInt($('#verifycode').val())) {
+                            let data = {
+                                firstname: $('#firstname').val(),
+                                lastname: $('#lastname').val(),
+                                email: $('#email').val(),
+                                msg: $('#msg').val()
+                            };
+                            let url = 'https://script.google.com/macros/s/AKfycbwkumWHfN4lYKrulteTtmqaSd8JcBvzrLpcfb_S7I0Y2fbd7Kgt/exec';
+                            fetch(url, {
+                                method: 'POST',
+                                mode: 'no-cors',
+                                cache: 'no-cache',
+                                credentials: 'omit',
+                                redirect: 'follow',
+                                body: JSON.stringify(data),
+                                headers: { 'Content-Type': 'application/json' }
+                            }).then(response => {
+                                formAlert(['success', 'Success: The response was submitted!']);
+                            }).catch(err => {
+                                formAlert(['danger', `Error: ${err}`]);
+                            });
+
+                            // reset form
+                            $('#sendMsg').trigger('reset');
+                            verifyset = reloadVerification();
+                        } else {
+                            formAlert(['danger', 'Error: Verification was unsuccessful. Please check your math again.']);
+                        }
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
         });
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        function reloadVerification() {
+            const a = getRandomInt(9);
+            const b = getRandomInt(9);
+            $('#verifyset').text(`What is ${a.toString()} times ${b.toString()}?`);
+            return [a, b];
+        }
+
+        function formAlert(message) {
+            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]}" role="alert">${message[1]} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button></div>`);
+        }
+
+        // bootstrap form validation
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+
+            }, false);
+        })();
     </script>
 </body>
 
