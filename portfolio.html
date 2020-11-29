@@ -163,10 +163,14 @@
                 </div>
             </div>
         </div>
+        <p class="text-center mt-5 mb-3 text-muted">dennis eum &copy; <span id="year"></span></p>
         <div style="padding-bottom: 10px;"></div>
     </div>
     <script>
         $(document).ready(function () {
+            // set copyright year
+            $('#year').text(new Date().getFullYear());
+            
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');
