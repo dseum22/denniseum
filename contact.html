@@ -55,49 +55,57 @@
 
     <!-- main body -->
     <div class="container-md">
-        <div class="card custom-card">
-            <div class="card-body row row-eq-height">
-                <div class="col-4">
-                    <img src="images/contact_minor.jpg" class="img img-fluid minor" alt="dennis eum personal photo">
-                </div>
-                <div class="col-8">
-                    <h1 class="major-title">CONTACT</h1>
-                    <img src="images/contact_major.jpg" class="img img-fluid major chill" alt="abstract image">
+        <div class="row row-eq-height">
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h3 class="card-title">CONTACT</h3>
+                        <p class="card-text">
+                            <img src="images/contact_minor.jpg" class="img img-fluid minor"
+                                alt="dennis eum personal photo">
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card custom-card">
-            <div class="card-body">
-                <h5 class="card-title">Send a message:</h5>
-                <p class="card-text">
-                <form class="needs-validation" id="sendMsg" novalidate>
-                    <fieldset id="sendMsgFields">
-                        <div class="form-row">
-                            <div class="form-group col-md">
-                                <input type="text" class="form-control" id="firstname" placeholder="First name"
-                                    required>
-                            </div>
-                            <div class="form-group col-md">
-                                <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
-                            </div>
-                            <div class="form-group col-md">
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="msg" rows="3" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-3 mb-3">
-                                <label id="verifyset" for="verifycode"></label>
-                                <input type="text" class="form-control" id="verifycode" placeholder="Code" required>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary align-middle" type="submit" id="submit-btn">Send email</button>
-                    </fieldset>
-                </form>
-                </p>
+            <div class="col-md-8">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Send a message:</h5>
+                        <p class="card-text">
+                        <form class="needs-validation" id="sendMsg" novalidate>
+                            <fieldset id="sendMsgFields">
+                                <div class="form-row">
+                                    <div class="form-group col-md">
+                                        <input type="text" class="form-control" id="firstname" placeholder="First name"
+                                            required>
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <input type="text" class="form-control" id="lastname" placeholder="Last name"
+                                            required>
+                                    </div>
+                                    <div class="form-group col-md">
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="msg" rows="3" placeholder="Message"
+                                        required></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3 mb-3">
+                                        <label id="verifyset" for="verifycode"></label>
+                                        <input type="text" class="form-control" id="verifycode" placeholder="Code"
+                                            required>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary align-middle" type="submit" id="submit-btn">Send
+                                    email</button>
+                            </fieldset>
+                        </form>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <p class="text-center mt-5 mb-3 text-muted">dennis eum &copy; <span id="year"></span></p>

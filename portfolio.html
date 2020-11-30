@@ -4,6 +4,7 @@
 <head>
     <title>PORTFOLIO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Dennis Eum">
     <meta name="description" content="Dennis Eum: view all of my favorite projects in my personal portfolio.">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -13,7 +14,7 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- main stylesheet -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="test.css">
 
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -22,12 +23,11 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/fdddb9628d.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@5.2.0/dist/amplitude.js"></script>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#"><b>DENNIS EUM</b></a>
         <div class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -55,57 +55,88 @@
 
     <!-- main body -->
     <div class="container-md">
-        <div class="card custom-card">
-            <div class="card-body row row-eq-height">
-                <div class="col-8">
-                    <h1 class="major-title">PORTFOLIO</h1>
-                    <img src="images/portfolio_major.jpg" class="img img-fluid major chill" alt="abstract image">
-                </div>
-                <div class="col-4">
-                    <img src="images/portfolio_minor.jpg" class="img img-fluid minor" alt="dennis eum's cat photo">
-                </div>
-            </div>
-        </div>
-
-        <!-- section - programming/design -->
-        <div class="card custom-card">
-            <div class="card-body">
-                <h3 class="card-title">Programming/Design</h3>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h3 class="card-title">portfolio</h3>
+                        <p class="card-text">
+                            <img src="images/portfolio_minor.jpg" class="img img-fluid minor"
+                                alt="dennis eum's cat photo">
+                        </p>
+                    </div>
+                </div>
                 <!-- card - scheduling website -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Scheduling Website</h5>
+                        <h5 class="card-title">scheduling website</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2020 Fall - Present</span>
-                            I took on this project for the newly established tutoring branch of <a
-                                href="https://www.roboticsforall.net" target="_blank">Robotics For All</a>, a non-profit
-                            organization focused on helping all
-                            students receive an engaging STEM experience. The scheduling software features an account
-                            system to keep track of student/tutor priviliges and a slot system that
-                            keeps track of timezones for the internationally-based users. For the
-                            front-end, I used HTML and JS, mostly relying on Bootstrap framework and design for CSS. For
-                            the back-end, I used PHP for
-                            server-side scripting and SQL for the database.
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2020 Fall - Present</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">HTML, CSS, JS, PHP, SQL</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">I built this for a tutoring non-profit organization so
+                                    that it could manage its tutors/students and their schedules efficiently for a lower
+                                    cost than alternatives. The website includes user privilege management, dynamic
+                                    timezone converter, a secure slot system, etc.</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
                 <!-- card - personal website -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Personal Website</h5>
+                        <h5 class="card-title">personal website</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2020 Summer - Present</span>
-                            The design is mostly based off of material design guidelines (e.g. the lighter colors,
-                            border radii, box
-                            shadows, etc). In addition, this website includes some of my personal design preferences
-                            such as a customized functionality + design for the navigation bar. I used the Bootstrap
-                            framework to structure the website,
-                            but the majority of the placement and design is my own. This displays my HTML, CSS, and JS
-                            skills (using JQuery library).
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2020 Summer - Present</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">HTML, CSS, JS (jQuery)</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">My website has gone through several revisions, but I
+                                    ultimately opted for a simpler, grayscale design. While it is mainly to display my
+                                    résumé and portfolio, I am most proud of the contact page's form handling: This is a
+                                    static website, so I had to use GApps scripting to handle the POST data.</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
@@ -115,29 +146,112 @@
                 <!-- card - disease data visualization -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Disease Data Visualization</h5>
+                        <h5 class="card-title">disease data analysis</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2019 Summer</span>
-                            This program imported an international disease database to visualize the frequency of
-                            disease in different countries. Mathematica's GUI features such as tab control were also
-                            used to organize the visualizations. This allows easy comparisons between disease
-                            frequencies in each country.
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">Mathematica</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">I took an international database of disease rates by
+                                    geography and organized/analyzed the data. I setup a simple visual representation of
+                                    the data in a tab format with charts and also used machine learning to identify
+                                    patterns in disease spread over time by geography.</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
                 <!-- card - cold emailing script -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Cold Emailing Script</h5>
+                        <h5 class="card-title">cold emailing script</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2020 Fall</span>
-                            This is a Google Apps script based program (it is based on JS with Google Apps specific
-                            functions included). With a given Google spreadsheet acting as a database of potential
-                            schools who might be interested (in a single, local area) in the <a
-                                href="https://www.roboticsforall.net" target="_blank">Robotics For All</a> services, the
-                            program automatically goes through and automatically sends the correct email depending on
-                            the school's grade level. This required some knowledge about GApps script functions and JS
-                            for spreadsheet scripting.
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2020 Fall</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">HTML, JS with GApps functions</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">I coded this for a non-profit organization so that
+                                    emails would be automatically and easily sent for a given list of potential schools
+                                    interested in the organization's services. The script changed the email based on
+                                    school grade levels and the purpose type.</span></li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- card - jumble solver -->
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">jumble solver</h5>
+                        <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">Python</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">This was a relatively simple script took a jumble of
+                                    letters and returned a list of the possible words that the letters could form,
+                                    similar to anagrams. While the planning took some time, the coding was
+                                    straightforward, but it was exciting to see the program work. (sample is <a
+                                        class="links-ex" href="files/jumble.py">here</a>)</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
@@ -146,43 +260,121 @@
                 <!-- card - railfence cypher -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Railfence Cypher</h5>
+                        <h5 class="card-title">railfence cypher</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2019 Summer</span>
-                            This was one of my favorite Python projects. I created an algorithm to encode and decode a
-                            railfence cypher of any rail (as long as the rail is known). A sample copy of the algorithm
-                            is <a href="files/railfence-cypher.py">here</a>. While I did begin creating a GUI for this
-                            with tkinter, school started up so I left it in an unfinished state for the future (sample
-                            <a href="files/railfence-cypher-gui.py">here</a>).
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">Python</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">This was one of my favorite Python projects. I created
+                                    an algorithm to encipher and decipher a railfence cypher of any rail (it can decode
+                                    cyphers of unknown rails as well). I did begin creating a GUI for it with tkinter,
+                                    but I left it unfinished after school began. (sample is <a class="links-ex"
+                                        href="files/railfence-cypher.py">here</a>)</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
                 <!-- card - spotify playlist covers -->
                 <div class="card custom-card">
                     <div class="card-body">
-                        <h5 class="card-title">Spotify Playlist Covers</h5>
+                        <h5 class="card-title">spotify playlist covers</h5>
                         <p class="card-text">
-                            <span class="badge badge-secondary">2020 Summer</span>
-                            This was a brief project sparked by my desire to have uniform and simple Spotify playlist
-                            (icon) covers. Spotify does automatically create covers, but it is a combination of the
-                            playlist's songs' album arts and often looks disjointed. I used Photoshop to make vectors of
-                            icons and create covers with clean pastel colors. The treble clef icon was difficult to
-                            make, so I resourced it online. A sample zip of the covers is <a
-                                href="files/spotify-playlist-covers.zip">here</a>.
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2020 Summer</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-images" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M12.002 4h-10a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1zm-10-1a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-10zm4 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M4 2h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1v1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2h1a1 1 0 0 1 1-1z" />
+                                </svg> <span class="align-middle">Photoshop</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">As a fun, hobby project, I designed Spotify playlist
+                                    covers with a simple icon and pastel-colored background. These made my Spotify
+                                    library more uniform and clean in terms of design.
+                                    Creating the treble clef icon was too difficult, however, so I had to rely on an
+                                    online version. (sample is <a class="links-ex"
+                                        href="files/spotify-playlist-covers.zip">here</a>)</span></li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <!-- card - dino hunt game -->
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">dino hunt game</h5>
+                        <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-calendar2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z" />
+                                    <path
+                                        d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z" />
+                                </svg> <span class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-code-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z" />
+                                </svg> <span class="align-middle">Python</span></li>
+                            <li class="list-group-item"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                    class="bi bi-info-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z" />
+                                    <circle cx="8" cy="4.5" r="1" />
+                                </svg> <span class="align-middle">This was a two-player dino hunt game based on die
+                                    rolling . It's strategy is very similar to blackjack. I created a Die class and
+                                    multiple conditional statements to function for the different scenarios in the game.
+                                    (sample is <a class="links-ex" href="files/dino-hunt-dice.py">here</a>)</span></li>
+                        </ul>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- section - music -->
-        <div class="card custom-card">
-            <div class="card-body">
-                <h3 class="card-title">Music</h3>
-            </div>
-        </div>
-        <p class="text-center mt-5 mb-3 text-muted">dennis eum &copy; <span id="year"></span></p>
-        <div style="padding-bottom: 10px;"></div>
+        <p class="text-center">dennis eum &copy; <span id="year"></span></p>
+        <div style="padding-bottom: 5px;"></div>
     </div>
     <script>
         $(document).ready(function () {
@@ -192,12 +384,6 @@
             // toggle navbar
             $('.navbar-toggler').click(function () {
                 $('.navbar, .navbar-brand, .container-md').toggleClass('tint');
-            });
-
-            // toggle card lists
-            $(".li-toggler").click(function () {
-                $(this).next(".li-desc").fadeToggle(300);
-                $(this).children(".fas").toggleClass("fa-rotate-180");
             });
         });
     </script>
