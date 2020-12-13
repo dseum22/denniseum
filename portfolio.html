@@ -56,16 +56,20 @@
 
     <!-- container -->
     <div class="container-sm">
-        <div class="row">
-            <div class="col-md">
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-md-6 col-lg-4 order-first">
                 <div class="card">
                     <div class="card-body">
                         <h1 class="card-title text-light bg-dark dark-header shadow">portfolio</h1>
                         <img src="images/portfolio_minor.jpg" alt="dennis eum portfolio page">
                         <a class="btn btn-outline-dark mt-3" href="contact.html" style="width:100%;">request unlisted
                             project examples<i data-feather="chevron-right"></i></a>
+                        <a class="btn btn-outline-dark mt-3" href="https://github.com/dseum22" target="_blank" style="width:100%;">go to my github&nbsp;<i
+                                data-feather="github"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - scheduling website -->
                 <div class="card">
                     <div class="card-body">
@@ -83,6 +87,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - personal website -->
                 <div class="card">
                     <div class="card-body">
@@ -94,15 +100,14 @@
                                     class="align-middle">HTML, CSS, JS (jQuery)</span></li>
                             <li class="list-group-item bg-light"><i data-feather="info"></i> <span
                                     class="align-middle">My website has gone through several revisions, but I
-                                    ultimately opted for a simpler, grayscale design. While it is mainly to display my
+                                    ultimately opted for a minimal, dark theme. While it is mainly to display my
                                     résumé and portfolio, I am most proud of the contact page's form handling: This is a
-                                    static website, so I had to use GApps scripting to handle the POST data.</span></li>
+                                    static website, so I used GApps scripting to handle the POST data.</span></li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-            <div class="col-md">
+            <div class="col-md-6 col-lg-4">
                 <!-- card - disease data visualization -->
                 <div class="card">
                     <div class="card-body">
@@ -120,6 +125,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - cold emailing script -->
                 <div class="card">
                     <div class="card-body">
@@ -137,6 +144,28 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <!-- card - railfence cypher -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">railfence cypher</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
+                                    class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
+                                    class="align-middle">Python</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
+                                    class="align-middle">This was one of my favorite Python projects. I created
+                                    an algorithm to encipher and decipher a railfence cypher of any rail (it can decode
+                                    cyphers of unknown rails as well). I did begin creating a GUI for it with tkinter,
+                                    but I left it unfinished after school began. (example is <a class="links-ex"
+                                        href="files/railfence-cypher.py">here</a>)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - jumble solver -->
                 <div class="card">
                     <div class="card-body">
@@ -156,25 +185,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md">
-                <!-- card - railfence cypher -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">railfence cypher</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
-                                    class="align-middle">2019 Summer</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
-                                    class="align-middle">Python</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
-                                    class="align-middle">This was one of my favorite Python projects. I created
-                                    an algorithm to encipher and decipher a railfence cypher of any rail (it can decode
-                                    cyphers of unknown rails as well). I did begin creating a GUI for it with tkinter,
-                                    but I left it unfinished after school began. (example is <a class="links-ex"
-                                        href="files/railfence-cypher.py">here</a>)</span></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - spotify playlist covers -->
                 <div class="card">
                     <div class="card-body">
@@ -194,6 +205,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4 order-last">
                 <!-- card - dino hunt game -->
                 <div class="card">
                     <div class="card-body">
@@ -223,6 +236,9 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script async="" src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"></script>
     <script>
         feather.replace()
         $(document).ready(function () {
