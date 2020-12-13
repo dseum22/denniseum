@@ -92,6 +92,9 @@
                                             <label id="verifyset" for="verifycode" class="form-label"></label>
                                             <input type="text" class="form-control" id="verifycode" placeholder="Code"
                                                 required>
+                                            <div class="invalid-feedback">
+                                                Verification was unsuccessful. Please check your math again.
+                                            </div>
                                         </div>
                                         <div class="col-12">
                                             <button class="btn btn-outline-dark" type="submit" id="submit-btn">send
@@ -117,12 +120,10 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
-        feather.replace()
+        feather.replace();
         $(document).ready(function () {
             // set copyright year
             $('#year').text(new Date().getFullYear());
-
-
         });
 
         // set verification code to prevent bots
@@ -130,7 +131,7 @@
 
         // functions
         (function () {
-            'use strict'
+            'use strict';
             var forms = document.querySelectorAll('.needs-validation');
             Array.prototype.slice.call(forms)
                 .forEach(function (form) {
@@ -143,7 +144,7 @@
                             event.preventDefault();
                             runFormScript();
                         }
-                        form.classList.add('was-validated')
+                        form.classList.add('was-validated');
                     }, false);
                 });
         })();
@@ -160,9 +161,7 @@
         }
 
         function formAlert(message) {
-            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} alert-dismissible fade show mt-3" role="alert">${message[1]} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button></div>`);
+            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} alert-dismissible fade show mt-3" role="alert">${message[1]} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`);
         }
 
         function runFormScript() {
@@ -191,12 +190,12 @@
                 verifyset = reloadVerification();
                 $('#sendMsgFields').prop('disabled', false);
                 $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace()
+                feather.replace();
             }).catch(err => {
                 formAlert(['danger', `Error: ${err}`]);
                 $('#sendMsgFields').prop('disabled', false);
                 $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace()
+                feather.replace();
             });
         }
 
@@ -204,10 +203,8 @@
             let verifycode = $('#verifycode');
             if ((verifyset[0] * verifyset[1]) == parseInt(verifycode.val())) {
                 verifycode[0].setCustomValidity("");
-            }
-            else {
+            } else {
                 verifycode[0].setCustomValidity('Invalid.');
-                formAlert(['danger', 'Error: Verification was unsuccessful. Please check your math again.']);
             }
         }
     </script>
