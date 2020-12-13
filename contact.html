@@ -161,7 +161,13 @@
         }
 
         function formAlert(message) {
-            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} alert-dismissible fade show mt-3" role="alert">${message[1]} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>`);
+            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} mt-3" role="alert">${message[1]}</div>`);
+            setTimeout(function () {
+                // auto fadeout animation
+                $('.alert').fadeOut(1000, function () {
+                    $(this).alert('close');
+                });
+            }, 2000);
         }
 
         function runFormScript() {
