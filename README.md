@@ -1,4 +1,4 @@
 # denniseum
- Personal Website
+personal website
  
- Can be accessed at https://denniseum.com
+can be accessed at https://denniseum.com
