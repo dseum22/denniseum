@@ -76,30 +76,28 @@
                         <div class="card" style="margin-top:0;">
                             <div class="card-body">
                                 <h5 class="card-title text-light bg-dark dark-header">response form</h5>
-                                <form class="needs-validation" id="sendMsg" novalidate>
-                                    <fieldset class="row g-3" id="sendMsgFields">
+                                <form class="needs-validation" id="responseform" novalidate>
+                                    <fieldset class="row g-3">
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" id="firstname"
+                                            <input type="text" class="form-control" name="firstname"
                                                 placeholder="First name" required>
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" id="lastname"
+                                            <input type="text" class="form-control" name="lastname"
                                                 placeholder="Last name" required>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="input-group has-validation">
-                                                <input type="email" class="form-control" id="email" placeholder="Email"
-                                                    required>
-                                            </div>
+                                            <input type="email" class="form-control" name="email" placeholder="Email"
+                                                required>
                                         </div>
                                         <div class="col-md">
-                                            <textarea class="form-control" id="message" rows="3" placeholder="Message"
+                                            <textarea class="form-control" name="message" rows="3" placeholder="Message"
                                                 required></textarea>
                                         </div>
                                         <div class="col-md-12">
-                                            <label id="verifyset" for="verifycode" class="form-label"></label>
-                                            <input type="text" class="form-control" id="verifycode" placeholder="Code"
-                                                required>
+                                            <label data-formsender="label" class="form-label"></label>
+                                            <input data-formsender="input" type="text" class="form-control"
+                                                placeholder="Code" required>
                                             <div class="invalid-feedback">
                                                 Verification was unsuccessful. Please check your math again.
                                             </div>
@@ -127,99 +125,29 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/formsender-js@1.0.4/formsender.min.js"></script>
     <script>
         feather.replace();
         $(document).ready(function () {
             // set copyright year
             $('#year').text(new Date().getFullYear());
         });
-
-        // set verification code to prevent bots
-        var verifyset = reloadVerification();
-
-        // functions
-        (function () {
-            'use strict';
-            var forms = document.querySelectorAll('.needs-validation');
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        checkCode();
-                        if (!form.checkValidity()) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        } else {
-                            event.preventDefault();
-                            runFormScript();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-        })();
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-
-        function reloadVerification() {
-            const a = getRandomInt(9);
-            const b = getRandomInt(9);
-            $('#verifyset').text(`What is ${a.toString()} times ${b.toString()}?`);
-            return [a, b];
-        }
-
+        let responseform = new Formsender('responseform', 'https://script.google.com/macros/s/AKfycbwkumWHfN4lYKrulteTtmqaSd8JcBvzrLpcfb_S7I0Y2fbd7Kgt/exec', true);
+        responseform.custom('load', '<div class="spinner-border" role="status"> <span class="visually-hidden">Loading...</span> </div>');
+        responseform.custom('reset', function () {
+            formAlert(['success', 'Success: The response was sent!']);
+        });
+        responseform.custom('error', function () {
+            formAlert(['error', 'Error: Please try again.']);
+        });
         function formAlert(message) {
-            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} mt-3" role="alert">${message[1]}</div>`);
+            $('#responseform').parent().append(`<div class="alert alert-${message[0]} mt-3" role="alert">${message[1]}</div>`);
             setTimeout(function () {
                 // auto fadeout animation
                 $('.alert').fadeOut(1000, function () {
                     $(this).alert('close');
                 });
             }, 2000);
-        }
-
-        function runFormScript() {
-            $('#verifycode')[0].setCustomValidity('');
-            $('#sendMsgFields').prop('disabled', true);
-            $('#submit-btn').html('<div class="spinner-border" role="status"> <span class="visually-hidden">Loading...</span> </div>');
-            let data = {
-                firstname: $('#firstname').val(),
-                lastname: $('#lastname').val(),
-                email: $('#email').val(),
-                msg: $('#message').val()
-            };
-            let url = atob('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3a3VtV0hmTjRsWUtydWx0ZVR0bXFhU2Q4SmNCdnpyTHBjZmJfUzdJMFkyZmJkN0tndC9leGVj');
-            fetch(url, {
-                method: 'POST',
-                mode: 'no-cors',
-                cache: 'no-cache',
-                credentials: 'omit',
-                redirect: 'follow',
-                body: JSON.stringify(data),
-                headers: { 'Content-Type': 'application/json' }
-            }).then(response => {
-                formAlert(['success', 'Success: The response was sent!']);
-                // reset form
-                $('#sendMsg').trigger('reset').removeClass('was-validated');
-                verifyset = reloadVerification();
-                $('#sendMsgFields').prop('disabled', false);
-                $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace();
-            }).catch(err => {
-                formAlert(['danger', `Error: ${err}`]);
-                $('#sendMsgFields').prop('disabled', false);
-                $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace();
-            });
-        }
-
-        function checkCode() {
-            let verifycode = $('#verifycode');
-            if ((verifyset[0] * verifyset[1]) == parseInt(verifycode.val())) {
-                verifycode[0].setCustomValidity("");
-            } else {
-                verifycode[0].setCustomValidity('Invalid.');
-            }
         }
     </script>
 </body>
