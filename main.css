@@ -1,149 +1,158 @@
 /* custom */
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background-image: url(images/background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    padding-top: 65px;
+  background-image: url(images/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 65px;
 }
 
 img {
-    width: 100%;
-    border-radius: 10px;
-    opacity: .9;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .25);
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .dark-header {
-    padding: 6px 12px;
-    border-radius: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
 }
 
 .li-toggler {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .li-toggler:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .li-desc {
-    display: none;
-    font-style: italic;
+  display: none;
+  font-style: italic;
 }
 
 .ul-none {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* navbar */
 
 .navbar-brand {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-    display: inline-block;
-    color: rgb(0, 0, 0);
-    transition: background-size .25s ease;
-    padding: 0;
-    margin: .5rem 1rem;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  transition: background-size 0.25s ease;
+  padding: 0;
+  margin: 0.5rem 1rem;
 }
 
 .nav-item .nav-link.active {
-    font-size: 20px;
-    background: linear-gradient(to right, #000000, #000000);
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
+  font-size: 20px;
+  background: linear-gradient(to right, #000000, #000000);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
 }
 
 .nav-item .nav-link:not(.active) {
-    font-size: 20px;
-    background: linear-gradient(to right, #bdbdbd, #bdbdbd);
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: 0% 3px;
+  font-size: 20px;
+  background: linear-gradient(to right, #bdbdbd, #bdbdbd);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
 }
 
 .nav-item .nav-link:not(.active):hover {
-    color: rgb(0, 0, 0);
-    background-size: 100% 3px;
+  color: rgb(0, 0, 0);
+  background-size: 100% 3px;
 }
 
 .navbar-toggler span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #000000;
-    border-radius: 3px;
-    transform-origin: 4px 0px;
-    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.33s ease;
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000000;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.33s ease;
 }
 
 [data-bs-toggle="collapse"][aria-expanded="true"]>span:nth-child(1) {
-    -webkit-transform: rotate(45deg) translate(1px, -2px);
-    -moz-transform: rotate(45deg) translate(1px, -2px);
-    -ms-transform: rotate(45deg) translate(1px, -2px);
-    -o-transform: rotate(45deg) translate(1px, -2px);
-    transform: rotate(45deg) translate(1px, -2px);
+  -webkit-transform: rotate(45deg) translate(1px, -2px);
+  -moz-transform: rotate(45deg) translate(1px, -2px);
+  -ms-transform: rotate(45deg) translate(1px, -2px);
+  -o-transform: rotate(45deg) translate(1px, -2px);
+  transform: rotate(45deg) translate(1px, -2px);
 }
 
 [data-bs-toggle="collapse"][aria-expanded="true"]>span:nth-child(2) {
-    opacity: 0;
-    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-    -moz-transform: rotate(0deg) scale(0.2, 0.2);
-    -ms-transform: rotate(0deg) scale(0.2, 0.2);
-    -o-transform: rotate(0deg) scale(0.2, 0.2);
-    transform: rotate(0deg) scale(0.2, 0.2);
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+  -moz-transform: rotate(0deg) scale(0.2, 0.2);
+  -ms-transform: rotate(0deg) scale(0.2, 0.2);
+  -o-transform: rotate(0deg) scale(0.2, 0.2);
+  transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 [data-bs-toggle="collapse"][aria-expanded="true"]>span:nth-child(3) {
-    -webkit-transform: rotate(-45deg) translate(0, -1px);
-    -moz-transform: rotate(-45deg) translate(0, -1px);
-    -ms-transform: rotate(-45deg) translate(0, -1px);
-    -o-transform: rotate(-45deg) translate(0, -1px);
-    transform: rotate(-45deg) translate(0, -1px);
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+  -moz-transform: rotate(-45deg) translate(0, -1px);
+  -ms-transform: rotate(-45deg) translate(0, -1px);
+  -o-transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(0, -1px);
 }
 
 /* bootstrap additions */
 
 .navbar-toggler {
-    border: none;
+  border: none;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .card {
-    margin-top: 20px;
-    width: 100%;
-    background-color: #f8f9fa;
-    border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 10px;
 }
 
 .cards-in .card {
-    border-radius: 10px;
-    border-color: #212529;
+  border-radius: 10px;
+  border-color: #212529;
 }
 
 .btn {
-    border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* responsive */
+
+@media (min-width: 576px) {
+  .social {
+    position: absolute;
+    right: 20px;
+  }
 }

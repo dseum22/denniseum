@@ -8,6 +8,8 @@
     <meta name="author" content="Dennis Eum">
     <meta name="description"
         content="Dennis Eum: send an email to me and communicate. request a full copy of my resume here or unlisted project examples.">
+    <meta name="keywords"
+        content="dennis eum, dennis, eum, denniseum.com, dennis eum website, dennis eum personal website, dennis eum minnesota, dennis eum us, dennis eum contact page, contact dennis, contact dennis eum">
 
     <!-- icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -29,6 +31,12 @@
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><strong>DENNIS EUM</strong></a>
+            <div class="d-inline-flex social">
+                <a class="btn btn-outline-dark me-2" href="https://www.linkedin.com/in/dennis-eum-7a129b1b1/"
+                    target="_blank"><i data-feather="linkedin"></i></a>
+                <a class="btn btn-outline-dark" href="https://github.com/dseum22" target="_blank"><i
+                        data-feather="github"></i></a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -67,34 +75,34 @@
                     <div class="col-sm cards-in">
                         <div class="card" style="margin-top:0;">
                             <div class="card-body">
-                                <h5 class="card-title text-light bg-dark dark-header">response form</h5>
-                                <form class="needs-validation" id="sendMsg" novalidate>
-                                    <fieldset class="row g-3" id="sendMsgFields">
+                                <form class="needs-validation" name="responseForm" novalidate>
+                                    <fieldset class="row g-3">
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" id="firstname"
-                                                placeholder="First name" required>
+                                            <input type="text" class="form-control" name="firstname"
+                                                placeholder="first name" required>
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" id="lastname"
-                                                placeholder="Last name" required>
+                                            <input type="text" class="form-control" name="lastname"
+                                                placeholder="last name" required>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="input-group has-validation">
-                                                <input type="email" class="form-control" id="email" placeholder="Email"
-                                                    required>
-                                            </div>
+                                            <input type="email" class="form-control" name="email" placeholder="email"
+                                                required>
                                         </div>
                                         <div class="col-md">
-                                            <textarea class="form-control" id="message" rows="3" placeholder="Message"
+                                            <textarea class="form-control" name="message" rows="3" placeholder="message"
                                                 required></textarea>
                                         </div>
                                         <div class="col-md-12">
-                                            <label id="verifyset" for="verifycode" class="form-label"></label>
-                                            <input type="text" class="form-control" id="verifycode" placeholder="Code"
-                                                required>
+                                            <label data-verify="label" class="form-label"></label>
+                                            <input data-verify="input" type="text" class="form-control"
+                                                placeholder="code" required>
+                                            <div class="invalid-feedback">
+                                                verification was unsuccessful. please check your math again.
+                                            </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-outline-dark" type="submit" id="submit-btn">send
+                                            <button class="btn btn-outline-dark" type="submit">send
                                                 message&nbsp;<i data-feather="smile"></i></button>
                                         </div>
                                     </fieldset>
@@ -110,107 +118,36 @@
     </div>
 
     <!-- scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyC8jc9VVwPEoKz7i9BAjK2cX0baguXgu-8",
+            authDomain: "denniseum-4b16e.firebaseapp.com",
+            projectId: "denniseum-4b16e",
+            storageBucket: "denniseum-4b16e.appspot.com",
+            messagingSenderId: "423578505617",
+            appId: "1:423578505617:web:4f79a4147e04bef5dbca30",
+            measurementId: "G-YPRR1BW97B"
+        };
+
+        // init firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // init firestore
+        const db = firebase.firestore();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"
+        integrity="sha256-OVk2fwTRcXYlVFxr/ECXsakqelJbOg5WCj1dXSIb+nU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        feather.replace()
-        $(document).ready(function () {
-            // set copyright year
-            $('#year').text(new Date().getFullYear());
-
-
-        });
-
-        // set verification code to prevent bots
-        var verifyset = reloadVerification();
-
-        // functions
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation');
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        checkCode();
-                        if (!form.checkValidity()) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        } else {
-                            event.preventDefault();
-                            runFormScript();
-                        }
-                        form.classList.add('was-validated')
-                    }, false);
-                });
-        })();
-
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-
-        function reloadVerification() {
-            const a = getRandomInt(9);
-            const b = getRandomInt(9);
-            $('#verifyset').text(`What is ${a.toString()} times ${b.toString()}?`);
-            return [a, b];
-        }
-
-        function formAlert(message) {
-            $('#sendMsg').parent().append(`<div class="alert alert-${message[0]} alert-dismissible fade show mt-3" role="alert">${message[1]} <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button></div>`);
-        }
-
-        function runFormScript() {
-            $('#verifycode')[0].setCustomValidity('');
-            $('#sendMsgFields').prop('disabled', true);
-            $('#submit-btn').html('<div class="spinner-border" role="status"> <span class="visually-hidden">Loading...</span> </div>');
-            let data = {
-                firstname: $('#firstname').val(),
-                lastname: $('#lastname').val(),
-                email: $('#email').val(),
-                msg: $('#message').val()
-            };
-            let url = atob('aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3a3VtV0hmTjRsWUtydWx0ZVR0bXFhU2Q4SmNCdnpyTHBjZmJfUzdJMFkyZmJkN0tndC9leGVj');
-            fetch(url, {
-                method: 'POST',
-                mode: 'no-cors',
-                cache: 'no-cache',
-                credentials: 'omit',
-                redirect: 'follow',
-                body: JSON.stringify(data),
-                headers: { 'Content-Type': 'application/json' }
-            }).then(response => {
-                formAlert(['success', 'Success: The response was sent!']);
-                // reset form
-                $('#sendMsg').trigger('reset').removeClass('was-validated');
-                verifyset = reloadVerification();
-                $('#sendMsgFields').prop('disabled', false);
-                $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace()
-            }).catch(err => {
-                formAlert(['danger', `Error: ${err}`]);
-                $('#sendMsgFields').prop('disabled', false);
-                $('#submit-btn').html('send message&nbsp;<i data-feather="smile"></i>');
-                feather.replace()
-            });
-        }
-
-        function checkCode() {
-            let verifycode = $('#verifycode');
-            if ((verifyset[0] * verifyset[1]) == parseInt(verifycode.val())) {
-                verifycode[0].setCustomValidity("");
-            }
-            else {
-                verifycode[0].setCustomValidity('Invalid.');
-                formAlert(['danger', 'Error: Verification was unsuccessful. Please check your math again.']);
-            }
-        }
-    </script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>

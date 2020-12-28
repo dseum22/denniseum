@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Dennis Eum">
     <meta name="description" content="Dennis Eum: view all of my favorite projects in my personal portfolio.">
+    <meta name="keywords"
+        content="dennis eum, dennis, eum, denniseum.com, dennis eum website, dennis eum personal website, dennis eum minnesota, dennis eum us, dennis eum portfolio page, dennis eum projects">
 
     <!-- icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -28,6 +30,12 @@
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light shadow">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><strong>DENNIS EUM</strong></a>
+            <div class="d-inline-flex social">
+                <a class="btn btn-outline-dark me-2" href="https://www.linkedin.com/in/dennis-eum-7a129b1b1/"
+                    target="_blank"><i data-feather="linkedin"></i></a>
+                <a class="btn btn-outline-dark" href="https://github.com/dseum22" target="_blank"><i
+                        data-feather="github"></i></a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -57,15 +65,40 @@
     <!-- container -->
     <div class="container-sm">
         <div class="row">
-            <div class="col-md">
+            <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <div class="card-body">
                         <h1 class="card-title text-light bg-dark dark-header shadow">portfolio</h1>
                         <img src="images/portfolio_minor.jpg" alt="dennis eum portfolio page">
                         <a class="btn btn-outline-dark mt-3" href="contact.html" style="width:100%;">request unlisted
-                            project examples<i data-feather="chevron-right"></i></a>
+                            projects<i data-feather="chevron-right"></i></a>
+                        <a class="btn btn-outline-dark mt-3" href="https://github.com/dseum22" target="_blank"
+                            style="width:100%;">go to my github page&nbsp;<i data-feather="github"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <!-- card - formsender.js -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">formsender.js</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
+                                    class="align-middle">2020 Winter</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
+                                    class="align-middle">JS</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
+                                    class="align-middle">I created this library to combine static form sending, bot
+                                    verification, and simple customization features. It allows initialization of
+                                    multiple forms on a page and simplifies the process for static websites so that a
+                                    form POST's to a Google Apps Script to handle the data.
+                                    (repo is <a class="links-ex" href="https://github.com/dseum22/formsender-js"
+                                        target="_blank">here</a>)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - scheduling website -->
                 <div class="card">
                     <div class="card-body">
@@ -83,6 +116,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - personal website -->
                 <div class="card">
                     <div class="card-body">
@@ -94,16 +129,17 @@
                                     class="align-middle">HTML, CSS, JS (jQuery)</span></li>
                             <li class="list-group-item bg-light"><i data-feather="info"></i> <span
                                     class="align-middle">My website has gone through several revisions, but I
-                                    ultimately opted for a simpler, grayscale design. While it is mainly to display my
-                                    résumé and portfolio, I am most proud of the contact page's form handling: This is a
-                                    static website, so I had to use GApps scripting to handle the POST data.</span></li>
+                                    ultimately opted for a minimal, dark theme with a lot of border radii use. I used to
+                                    use my
+                                    formsender.js library to handle my contact page response form, but now use Google
+                                    Firebase. (repo is <a class="links-ex" href="https://github.com/dseum22/denniseum"
+                                        target="_blank">here</a>)</span></li>
                         </ul>
                     </div>
                 </div>
-
             </div>
-            <div class="col-md">
-                <!-- card - disease data visualization -->
+            <div class="col-md-6 col-lg-4">
+                <!-- card - disease data analysis -->
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">disease data analysis</h5>
@@ -120,6 +156,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - cold emailing script -->
                 <div class="card">
                     <div class="card-body">
@@ -128,35 +166,19 @@
                             <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
                                     class="align-middle">2020 Fall</span></li>
                             <li class="list-group-item bg-light"><i data-feather="code"></i> <span
-                                    class="align-middle">HTML, JS with GApps functions</span></li>
+                                    class="align-middle">JS (Google Apps Script)</span></li>
                             <li class="list-group-item bg-light"><i data-feather="info"></i> <span
                                     class="align-middle">I coded this for a non-profit organization so that
                                     emails would be automatically and easily sent for a given list of potential schools
                                     interested in the organization's services. The script changed the email based on
-                                    school grade levels and the purpose type.</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- card - jumble solver -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">jumble solver</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
-                                    class="align-middle">2019 Summer</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
-                                    class="align-middle">Python</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
-                                    class="align-middle">This was a relatively simple script took a jumble of
-                                    letters and returned a list of the possible words that the letters could form,
-                                    similar to anagrams. While the planning took some time, the coding was
-                                    straightforward, but it was exciting to see the program work. (example is <a
-                                        class="links-ex" href="files/jumble.py">here</a>)</span></li>
+                                    school grade levels and the purpose type. (repo is <a class="links-ex"
+                                        href="https://github.com/dseum22/rfa-coldemailing"
+                                        target="_blank">here</a>)</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md-6 col-lg-4">
                 <!-- card - railfence cypher -->
                 <div class="card">
                     <div class="card-body">
@@ -171,10 +193,32 @@
                                     an algorithm to encipher and decipher a railfence cypher of any rail (it can decode
                                     cyphers of unknown rails as well). I did begin creating a GUI for it with tkinter,
                                     but I left it unfinished after school began. (example is <a class="links-ex"
-                                        href="files/railfence-cypher.py">here</a>)</span></li>
+                                        data-storage="railfence-cypher">here</a>)</span></li>
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <!-- card - jumble solver -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">jumble solver</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
+                                    class="align-middle">2019 Summer</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
+                                    class="align-middle">Python</span></li>
+                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
+                                    class="align-middle">This was a relatively simple script took a jumble of
+                                    letters and returned a list of the possible words that the letters could form,
+                                    similar to anagrams. While the planning took some time, the coding was
+                                    straightforward, but it was exciting to see the program work. (example is <a
+                                        class="links-ex" data-storage="jumble">here</a>)</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
                 <!-- card - spotify playlist covers -->
                 <div class="card">
                     <div class="card-body">
@@ -190,24 +234,7 @@
                                     library more uniform and clean in terms of design.
                                     Creating the treble clef icon was too difficult, however, so I had to rely on an
                                     online version. (example is <a class="links-ex"
-                                        href="files/spotify-playlist-covers.zip">here</a>)</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- card - dino hunt game -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">dino hunt game</h5>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item bg-light"><i data-feather="calendar"></i> <span
-                                    class="align-middle">2019 Summer</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="code"></i> <span
-                                    class="align-middle">Python</span></li>
-                            <li class="list-group-item bg-light"><i data-feather="info"></i> <span
-                                    class="align-middle">This was a two-player dino hunt game based on die
-                                    rolling . It's strategy is very similar to blackjack. I created a Die class and
-                                    multiple conditional statements to function for the different scenarios in the game.
-                                    (example is <a class="links-ex" href="files/dino-hunt-dice.py">here</a>)</span></li>
+                                        data-storage="spotify-playlist-covers">here</a>)</span></li>
                         </ul>
                     </div>
                 </div>
@@ -217,19 +244,39 @@
     </div>
 
     <!-- scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyC8jc9VVwPEoKz7i9BAjK2cX0baguXgu-8",
+            authDomain: "denniseum-4b16e.firebaseapp.com",
+            projectId: "denniseum-4b16e",
+            storageBucket: "denniseum-4b16e.appspot.com",
+            messagingSenderId: "423578505617",
+            appId: "1:423578505617:web:4f79a4147e04bef5dbca30",
+            measurementId: "G-YPRR1BW97B"
+        };
+
+        // init firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // init storage
+        const storage = firebase.storage();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        feather.replace()
-        $(document).ready(function () {
-            // set copyright year
-            $('#year').text(new Date().getFullYear());
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"
+        integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+        crossorigin="anonymous"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 
 </html>
