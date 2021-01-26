@@ -4,10 +4,7 @@ let DateTime = luxon.DateTime;
 let verifyset = reloadVerify();
 
 $(document).ready(function () {
-    // set copyright year
     $('#year').text(new Date().getFullYear());
-
-    // form submission
     $('form[name="responseForm"]').submit(function (event) {
         event.preventDefault();
         checkVerify(verifyset);
@@ -34,7 +31,6 @@ $(document).ready(function () {
 function pushAlert(msgset) {
     $('form[name="responseForm"]').parent().append(`<div class="alert alert-${msgset[0]} mt-3" role="alert">${msgset[1]}</div>`);
     setTimeout(function () {
-        // auto fadeout animation
         $('.alert').fadeOut(1000, function () {
             $(this).alert('close');
         });
