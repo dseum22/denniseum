@@ -32,7 +32,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><strong>DENNIS EUM</strong></a>
             <div class="d-inline-flex social">
-                <a class="btn btn-outline-dark me-2" href="https://www.linkedin.com/in/dennis-eum-7a129b1b1/"
+                <a class="btn btn-outline-dark me-2" href="https://www.linkedin.com/in/denniseum/"
                     target="_blank"><i data-feather="linkedin"></i></a>
                 <a class="btn btn-outline-dark" href="https://github.com/dseum22" target="_blank"><i
                         data-feather="github"></i></a>
@@ -78,31 +78,45 @@
                                 <form class="needs-validation" name="responseForm" novalidate>
                                     <fieldset class="row g-3">
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" name="firstname"
-                                                placeholder="first name" required>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="firstname"
+                                                    placeholder="John" required>
+                                                <label>First name</label>
+                                            </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="text" class="form-control" name="lastname"
-                                                placeholder="last name" required>
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" name="lastname"
+                                                    placeholder="Doe" required>
+                                                <label>Last name</label>
+                                            </div>
                                         </div>
                                         <div class="col-md-4">
-                                            <input type="email" class="form-control" name="email" placeholder="email"
-                                                required>
+                                            <div class="form-floating">
+                                                <input type="email" class="form-control" name="email"
+                                                    placeholder="name@example.com" required>
+                                                <label>Email</label>
+                                            </div>
                                         </div>
                                         <div class="col-md">
-                                            <textarea class="form-control" name="message" rows="3" placeholder="message"
-                                                required></textarea>
+                                            <div class="form-floating">
+                                                <textarea class="form-control" name="message" placeholder="message"
+                                                    style="height:100px;" required></textarea>
+                                                <label>Message</label>
+                                            </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <label data-verify="label" class="form-label"></label>
-                                            <input data-verify="input" type="text" class="form-control"
-                                                placeholder="code" required>
-                                            <div class="invalid-feedback">
-                                                verification was unsuccessful. please check your math again.
+                                            <div class="form-floating">
+                                                <input data-verify="input" type="text" class="form-control"
+                                                    placeholder="Code" required>
+                                                <label data-verify="label"></label>
+                                                <div class="invalid-feedback">
+                                                    Verification was unsuccessful. Please check your math again.
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-12">
-                                            <button class="btn btn-outline-dark" type="submit">send
+                                            <button class="btn btn-outline-dark" type="submit">Send
                                                 message&nbsp;<i data-feather="smile"></i></button>
                                         </div>
                                     </fieldset>
@@ -114,7 +128,7 @@
 
             </div>
         </div>
-        <p class="text-center mt-3 pb-3">dennis eum &copy; <span id="year"></span></p>
+        <p class="text-center mt-3 pb-3">&copy; <span id="year"></span> Dennis Eum</p>
     </div>
 
     <!-- scripts -->

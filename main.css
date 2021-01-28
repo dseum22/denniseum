@@ -53,6 +53,7 @@ img {
 /* navbar */
 
 .navbar-brand {
+  padding-left: 10px;
   font-size: 26px;
 }
 
