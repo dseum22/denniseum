@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <divç>
+        <div className='text-center'>
             <h1>Contact me</h1>
             <form className='mt-3'>
                 <div class="form-floating mb-3">
