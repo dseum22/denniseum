@@ -6,8 +6,11 @@ import Home from './pages/Home';
 import Resume from './pages/Resume';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
+import firebase from 'firebase/app';
+import 'firebase/analytics';
 
 function App() {
+  firebase.initializeApp();
   return (
     <>
       <div className='flex flex-col min-h-screen'>
