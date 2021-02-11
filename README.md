@@ -1,4 +1,4 @@
 # denniseum
-personal website
+Personal website
 
-can be accessed at https://denniseum.com
+Can be accessed at https://denniseum.com. The "react" branch is the deployed branch now.
