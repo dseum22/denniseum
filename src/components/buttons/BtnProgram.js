@@ -1,4 +1,5 @@
 import React from 'react'
+import 'devicon'
 
 const BtnProgram = (props) => {
     return (
