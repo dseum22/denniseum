@@ -47,7 +47,19 @@ export default class Contact extends Component {
                 disabled: true,
                 content: <><svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"> <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path> </svg> Processing...</>
             });
-            firebase.firestore().collection('responses').doc(DateTime.local().setZone('America/Chicago').toFormat('yyyy-MM-dd hh:mm:ss a')).set({ name: form.querySelector('input[name="name"]').value, email: form.querySelector('input[name="email"]').value, message: form.querySelector('textarea[name="message"]').value }).then(() => {
+            const now = DateTime.local().setZone('America/Chicago');
+            firebase.firestore().collection('responses').doc(now.toFormat('yyyy-MM-dd hh:mm:ss a')).set({
+                to: atob('ZHNldW0yMkBnbWFpbC5jb20='),
+                message: {
+                    subject: `Message @ ${now.toFormat('ff')}`,
+                    html: `<b>Name:</b> ${form.querySelector('input[name="name"]').value}<br><br><b>Email:</b> ${form.querySelector('input[name="email"]').value}<br><br><b>Message:</b><br>${form.querySelector('textarea[name="message"]').value}`
+                },
+                map: {
+                    name: form.querySelector('input[name="name"]').value,
+                    email: form.querySelector('input[name="email"]').value,
+                    message: form.querySelector('textarea[name="message"]').value
+                }
+            }).then(() => {
                 this.reloadVerify();
                 this.setState({ disabled: false });
                 form.reset();
