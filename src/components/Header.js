@@ -22,10 +22,10 @@ const Header = () => {
                 <Fade duration={500} bottom cascade>
                     <div className='flex mt-6 md:ml-auto md:mt-auto'>
                         <button className='btn-classic w-10 h-10 mr-6 focus:outline-none' onClick={scrollToContact}><Mail className='inline-block align-middle' /></button>
-                        <a className='btn-classic w-10 h-10 mr-6' href='https://www.linkedin.com/in/denniseum/' target='_blank' rel='noreferrer'><Linkedin className='inline-block align-middle' /></a>
-                        <a className='btn-classic w-10 h-10 mr-6' href='https://github.com/dseum22' target='_blank' rel='noreferrer'><GitHub className='inline-block align-middle' /></a>
-                        <a className='btn-classic w-10 h-10 mr-6' href='https://www.facebook.com/denniseum' target='_blank' rel='noreferrer'><Facebook className='inline-block align-middle' /></a>
-                        <a className='btn-classic w-10 h-10' href='http://instagram.com/denniseum' target='_blank' rel='noreferrer'><Instagram className='inline-block align-middle' /></a>
+                        <a className='btn-classic p-1 w-10 h-10 mr-6' href='https://www.linkedin.com/in/denniseum/' target='_blank' rel='noreferrer'><Linkedin className='inline-block align-middle' /></a>
+                        <a className='btn-classic p-1 w-10 h-10 mr-6' href='https://github.com/dseum22' target='_blank' rel='noreferrer'><GitHub className='inline-block align-middle' /></a>
+                        <a className='btn-classic p-1 w-10 h-10 mr-6' href='https://www.facebook.com/denniseum' target='_blank' rel='noreferrer'><Facebook className='inline-block align-middle' /></a>
+                        <a className='btn-classic p-1 w-10 h-10' href='http://instagram.com/denniseum' target='_blank' rel='noreferrer'><Instagram className='inline-block align-middle' /></a>
                     </div>
                 </Fade>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import BtnDate from './buttons/BtnDate'
+import BtnDate from '../buttons/BtnDate'
 import Slideshow from './Slideshow'
 
 const Project = (props) => {

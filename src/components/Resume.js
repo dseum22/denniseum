@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fade } from 'react-reveal'
-import BtnProgram from '../components/buttons/BtnProgram'
-import Project from '../components/Project'
+import BtnProgram from './buttons/BtnProgram'
+import Project from './items/Project'
 
 const Resume = () => {
     const celloAwards = ['YPSCA winner (Karen Lundmark Holmes Award)', 'Thursday Musical High School Division (1st place)', 'Salon Se Leve Solo Concerto Performing Invitation', 'Classical MPR Varsity Competition (Semi-finalist)', 'Mary West High School Division (1st place)', 'Thursday Musical Junior High Division (2nd place)', 'Schubert Club Junior High Division (1st place)', 'Mary West Junior High Division (1st place)'];

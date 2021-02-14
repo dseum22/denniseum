@@ -93,7 +93,7 @@ export default class Contact extends Component {
                                     <label data-verify='label'>{`What is ${this.state.verifyset[0].toString()} times ${this.state.verifyset[1].toString()}?`}</label>
                                 </div>
                                 <input data-verify='input' className='mb-3' placeholder='Verification code' type='text' required></input>
-                                <button type='button' className='text-gray-200 hover:text-gray-400 border-2 rounded-lg border-gray-200 hover:border-gray-400 w-full flex justify-center py-3' onClick={this.submitForm} disabled={this.state.disabled}>{this.state.content}
+                                <button type='button' className='btn-classic w-full flex justify-center py-3' onClick={this.submitForm} disabled={this.state.disabled}>{this.state.content}
                                 </button>
                             </fieldset>
                         </Fade>

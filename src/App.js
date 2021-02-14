@@ -1,18 +1,19 @@
 import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Resume from './pages/Resume'
-import Contact from './pages/Contact'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <div className='container-custom'>
-        <Header />
-        <Resume />
-        <Contact />
-        <Footer />
-      </div>
+      <Router>
+        <div className='container-custom'>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }

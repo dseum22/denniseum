@@ -18,7 +18,7 @@ body {
 }
 
 .btn-classic {
-  @apply text-gray-200 hover:text-gray-400 border-2 rounded-lg p-1 border-gray-200 hover:border-gray-400 text-center;
+  @apply text-gray-200 hover:text-gray-400 border-2 rounded-lg border-gray-200 hover:border-gray-400 text-center;
 }
 
 .text-name {
