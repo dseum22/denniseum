@@ -19,7 +19,8 @@ const Resume = () => {
                     <BtnProgram className='mr-6' icon='devicon-mysql-plain' name='MySQL' />
                     <BtnProgram className='mr-6' icon='devicon-laravel-plain' name='Laravel' />
                     <BtnProgram className='mr-6' icon='devicon-react-plain' name='React' />
-                    <BtnProgram icon='devicon-bootstrap-plain' name='Bootstrap' />
+                    <BtnProgram className='mr-6' icon='devicon-bootstrap-plain' name='Bootstrap' />
+                    <BtnProgram icon='devicon-python-plain' name='Python' />
                 </div>
             </Fade>
             <Fade duration={500} bottom>
