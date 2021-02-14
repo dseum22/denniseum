@@ -1,6 +1,7 @@
 import React from 'react'
 import { Mail, GitHub, Linkedin, Instagram, Facebook } from 'react-feather'
 import { Fade } from 'react-reveal'
+import BtnSocial from './buttons/BtnSocial'
 
 const Header = () => {
     const scrollToContact = () => {
@@ -21,11 +22,11 @@ const Header = () => {
                 </div>
                 <Fade duration={500} bottom cascade>
                     <div className='flex mt-6 md:ml-auto md:mt-auto'>
-                        <button className='btn-classic btn-social mr-6' onClick={scrollToContact}><Mail /></button>
-                        <a className='btn-classic btn-social mr-6' href='https://www.linkedin.com/in/denniseum/' target='_blank' rel='noreferrer'><Linkedin /></a>
-                        <a className='btn-classic btn-social mr-6' href='https://github.com/dseum22' target='_blank' rel='noreferrer'><GitHub /></a>
-                        <a className='btn-classic btn-social mr-6' href='https://www.facebook.com/denniseum' target='_blank' rel='noreferrer'><Facebook /></a>
-                        <a className='btn-classic btn-social' href='http://instagram.com/denniseum' target='_blank' rel='noreferrer'><Instagram /></a>
+                        <button className='btn-classic w-10 h-10 mr-6 focus:outline-none' onClick={scrollToContact}><Mail className='inline-block align-middle' /></button>
+                        <BtnSocial className='mr-6' href='https://www.linkedin.com/in/denniseum/'><Linkedin /></BtnSocial>
+                        <BtnSocial className='mr-6' href='https://github.com/dseum22/'><GitHub /></BtnSocial>
+                        <BtnSocial className='mr-6' href='https://www.facebook.com/denniseum/'><Facebook /></BtnSocial>
+                        <BtnSocial href='http://instagram.com/denniseum/'><Instagram /></BtnSocial>
                     </div>
                 </Fade>
             </div>

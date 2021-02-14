@@ -53,7 +53,7 @@ const Resume = () => {
             <h2 className='mt-12 text-4xl'>Cello Awards</h2>
             <div>
                 <Fade duration={500} bottom cascade>
-                    <ul className='font-base font-mono mt-6'>
+                    <ul className='font-mono text-xl mt-6'>
                         {celloAwards.map((item, index) => <li className='mt-2' key={index}>{item}</li>)}
                     </ul>
                 </Fade>

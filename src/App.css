@@ -17,19 +17,6 @@ body {
   @apply p-2 hover:bg-gray-800;
 }
 
-.btn {
-  @apply text-gray-200 hover:text-gray-400 border-2 rounded-lg border-gray-200 hover:border-gray-400;
-}
-
-.btn-social {
-  width: 40px;
-  height: 40px;
-}
-
-.btn-social svg {
-  @apply inline-block align-middle;
-}
-
 .btn-classic {
   @apply text-gray-200 hover:text-gray-400 border-2 rounded-lg p-1 border-gray-200 hover:border-gray-400 text-center;
 }
@@ -71,7 +58,7 @@ textarea {
   color: white;
   background-color: black;
   background-clip: padding-box;
-  border: 1px solid white;
+  border: 2px solid white;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

@@ -35,7 +35,7 @@ export default class Slideshow extends Component {
     render() {
         return this.state.images ? (
             <div className={this.props.className} ref={this.container}>
-                {this.state.images.map((item, index) => <img className='rounded-lg transition-opacity duration-500 ease-in-out border-2 border-white' src={item} key={index} alt={index} />)}
+                {this.state.images.map((item, index) => <img className='rounded-lg transition-opacity duration-500 ease-in-out border-2 border-white select-none' draggable='false' src={item} key={index} alt={index} />)}
             </div>
         ) : (<></>)
     }
