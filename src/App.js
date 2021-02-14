@@ -9,7 +9,7 @@ function App() {
       <Router>
         <div className='container-custom'>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
         </div>
