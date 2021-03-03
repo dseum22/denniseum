@@ -34,8 +34,8 @@ const Resume = () => {
             </Fade>
             <div>
                 <Fade duration={500} bottom>
-                    <Project title='Schedule Management App' date='2020 Fall - Present' slideSrc='tfa-calendar' slideCount={4} slideDuration={2500}>
-                        <p className='text-base'>I personally designed and coded a scheduling management software for a tutoring non-profit with the Laravel framework, utilizing HTML, CSS, JS, SQL, PHP. <span className='hidden lg:block'><br></br>The frontend was designed with the Bootstrap library. I deployed this app onto Google Cloud, utilizing their Cloud Run, Compute Engine, VPC network, and load balancing services.</span></p>
+                    <Project title='Schedule Management App' date='2020 Fall - Present' slideSrc='tfa-calendar' slideCount={5} slideDuration={2500}>
+                        <p className='text-base'>I personally designed and coded a scheduling management software for a tutoring non-profit with the Laravel framework, utilizing HTML, CSS, JS, SQL, PHP. <span className='hidden lg:block'><br></br>The frontend was designed with the Tailwind CSS framework. I deployed this app onto Google Cloud, utilizing their Cloud Run, Compute Engine, VPC network, and load balancing services.</span></p>
                     </Project>
                     <Project title='Personal Website' date='2020 Summer - Present' slideSrc='personal' slideCount={1} slideConstant={true}>
                         <p className='text-base'>This was a completely frontend-focused project: I utilized React and Tailwind CSS along with other supporting libraries to showcase my abilities.<span className='hidden lg:block'><br></br>The backend is handled by Firebase, using Firestore and Cloud Functions for the contact form as well as some analytics extensions.</span></p>

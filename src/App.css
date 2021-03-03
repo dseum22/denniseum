@@ -65,12 +65,14 @@ textarea {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   @apply rounded-lg py-3;
 }
+
 input:focus,
 textarea:focus {
-  border-color: #86b7fe;
+  border-color: #b0b0b0;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(176, 176, 176, 0.25);
 }
+
 input:disabled,
 input[readonly],
 textarea:disabled,
@@ -78,6 +80,17 @@ textarea[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
+
 textarea {
   min-height: calc(1.5em + 0.75rem + 2px);
+}
+
+.validated input:invalid, 
+.validated textarea:invalid {
+  border-color: #e85454;
+  outline: 0;
+}
+.validated input:invalid:focus, 
+.validated textarea:invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(232, 84, 84, 0.25);
 }
