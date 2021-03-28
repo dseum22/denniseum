@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
-import Resume from '../components/Resume'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
+import Header from '../Components/Header'
+import Resume from '../Components/Resume'
+import Contact from '../Components/Contact'
+import Footer from '../Components/Footer'
 
 const Home = () => {
     return (
