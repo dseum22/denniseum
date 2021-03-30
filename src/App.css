@@ -71,5 +71,5 @@
 body {
   padding-left: calc((100vw + 80px) / 21);
   padding-right: calc((100vw + 80px) / 21);
-  @apply bg-white antialiased;
+  @apply bg-white font-inter antialiased;
 }
