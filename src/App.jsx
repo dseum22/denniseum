@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <div className='flex flex-col justify-between min-h-screen'>
           <Header />
-          <main className='mt-10 md:mt-12 flex-grow'>
+          <main className='mt-6 md:mt-8 flex-grow'>
             <Switch>
               <Route exact path='/'>
                 <Home />

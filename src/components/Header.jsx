@@ -8,7 +8,7 @@ const Header = () => {
         <header className='pt-6 md:pt-10'>
             <div className='border-t border-b border-gray-400 mt-1 flex justify-between'>
                 <div className='flex justify-between lg:justify-start w-full'>
-                    <Link className='px-1 sm:px-2 md:px-3 my-auto text-xl sm:text-2xl font-bold' to='/'>DSE</Link>
+                    <Link className='px-1 sm:px-2 md:px-3 my-auto text-2xl sm:text-3xl font-bold' to='/'>DSE</Link>
                     <div className='flex'>
                         <PageLink to='/projects'>Projects</PageLink>
                         <PageLink to='/cello'>Cello</PageLink>

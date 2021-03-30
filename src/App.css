@@ -75,5 +75,5 @@ body {
 }
 
 .link-internal {
-  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600;
+  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600 transition-colors duration-300;
 }
