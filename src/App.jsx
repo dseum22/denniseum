@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className='flex flex-col justify-between h-screen'>
+        <div className='flex flex-col justify-between min-h-screen'>
           <Header />
-          <main className='my-2 md:my-4 h-full'>
+          <main className='mt-10 md:mt-12 flex-grow'>
             <Switch>
               <Route exact path='/'>
                 <Home />

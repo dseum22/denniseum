@@ -73,3 +73,7 @@ body {
   padding-right: calc((100vw + 80px) / 21);
   @apply bg-white font-inter antialiased;
 }
+
+.link-internal {
+  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600;
+}
