@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Cello from './pages/Cello'
 import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <div className='flex flex-col justify-between min-h-screen'>
           <Header />
           <main className='mt-6 md:mt-8 flex-grow'>

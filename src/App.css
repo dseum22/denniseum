@@ -4,74 +4,47 @@
 
 @layer base {
   @font-face {
-    font-family: Nunito;
-    font-weight: 400;
-    font-style: normal;
-    src: url(./fonts/Nunito-Regular.woff) format("woff");
-  }
-  @font-face {
-    font-family: Nunito;
-    font-weight: 400;
-    font-style: italic;
-    src: url(./fonts/Nunito-Italic.woff) format("woff");
-  }
-  @font-face {
-    font-family: Nunito;
-    font-weight: 700;
-    font-style: normal;
-    src: url(./fonts/Nunito-Bold.woff) format("woff");
-  }
-  @font-face {
-    font-family: Nunito;
-    font-weight: 700;
-    font-style: italic;
-    src: url(./fonts/Nunito-BoldItalic.woff) format("woff");
-  }
-  @font-face {
-    font-family: Nunito;
-    font-weight: 300;
-    font-style: normal;
-    src: url(./fonts/Nunito-Light.woff) format("woff");
-  }
-  @font-face {
-    font-family: Nunito;
-    font-weight: 300;
-    font-style: italic;
-    src: url(./fonts/Nunito-LightItalic.woff) format("woff");
-  }
-  @font-face {
-    font-family: Inter;
+    font-family: "Inter";
     font-weight: 400;
     font-style: normal;
     src: url(./fonts/Inter-Regular.woff) format("woff");
   }
   @font-face {
-    font-family: Inter;
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: italic;
+    src: url(./fonts/Inter-Italic.woff) format("woff");
+  }
+  @font-face {
+    font-family: "Inter";
     font-weight: 700;
     font-style: normal;
     src: url(./fonts/Inter-Bold.woff) format("woff");
   }
   @font-face {
-    font-family: Inter;
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: italic;
+    src: url(./fonts/Inter-BoldItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: "Inter";
     font-weight: 300;
     font-style: normal;
     src: url(./fonts/Inter-Light.woff) format("woff");
   }
-}
-
-@layer utilities {
-  .font-nunito {
-    font-family: "Nunito", sans-serif;
-  }
-  .font-inter {
-    font-family: "Inter", sans-serif;
+  @font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    font-style: italic;
+    src: url(./fonts/Inter-LightItalic.woff) format("woff");
   }
 }
 
 body {
   padding-left: calc((100vw + 80px) / 21);
   padding-right: calc((100vw + 80px) / 21);
-  @apply bg-white font-inter antialiased;
+  @apply bg-white font-sans antialiased;
 }
 
 .link-internal {
