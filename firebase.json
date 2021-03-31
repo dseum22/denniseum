@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "build",
+    "site": "denniseum-4b16e",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
