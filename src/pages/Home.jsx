@@ -6,12 +6,16 @@ import ListBody from '../components/lists/ListBody'
 import ListCollapse from '../components/lists/ListCollapse'
 import ListBox from '../components/lists/ListBox'
 import { Link } from 'react-router-dom'
+import InlineLink from '../components/links/InlineLink'
 
 const Home = () => {
     return (
         <PageLayout name='Dennis Eum'>
             <p className='text-xl sm:text-2xl'>
                 Hey! My name is Dennis Eum, and I am a student based in Minnesota. I do full stack development and am also an avid cellist and debater.
+            </p>
+            <p className='mt-2 md:mt-3 text-xl sm:text-2xl'>
+                You can request my full résumé and send me messages <InlineLink to='/contact'>here</InlineLink>.
             </p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-4 md:mt-6'>
                 <div className='grid grid-cols-1 gap-4 sm:gap-6'>
