@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const ListCollapse = (props) => {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <li className='transition-colors duration-300 mt-2 hover:cursor-pointer hover:bg-gray-100 py-1 px-3 select-none rounded' onClick={() => setIsOpen(!isOpen)}>
+        <li className='transition-colors duration-200 mt-2 hover:cursor-pointer hover:bg-gray-100 py-1 px-3 select-none rounded' onClick={() => setIsOpen(!isOpen)}>
             <div className='flex justify-between text-gray-500 text-lg sm:text-xl'>
                 <span>{props.name}</span>
                 <span className='ml-1 my-auto focus:outline-none'>

@@ -44,9 +44,22 @@
 body {
   padding-left: calc((100vw + 80px) / 21);
   padding-right: calc((100vw + 80px) / 21);
-  @apply bg-white font-sans antialiased;
+  @apply bg-white font-sans antialiased text-gray-900;
 }
 
 .link-internal {
-  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600 transition-colors duration-300;
+  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600 transition-colors duration-200;
+}
+
+.form-validate input:invalid,
+.form-validate textarea:invalid {
+  @apply border-red-500 focus:ring-red-500 transition-all duration-200;
+}
+
+.form-field {
+  @apply border border-gray-400 rounded-md w-full h-10 sm:h-12 outline-none focus:ring-1 focus:ring-gray-800 focus:border-gray-800 text-lg sm:text-xl p-2 sm:p-3 placeholder-gray-600 transition-all duration-200 disabled:bg-gray-100;
+}
+
+textarea.form-field {
+  min-height: 100px;
 }

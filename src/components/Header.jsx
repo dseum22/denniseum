@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PageLink from './PageLink'
-import SocialLink from './SocialLink'
+import PageLink from './links/PageLink'
+import SocialLink from './links/SocialLink'
 
 const Header = () => {
     return (

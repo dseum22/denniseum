@@ -27,7 +27,7 @@ const Home = () => {
                     </CardItem>
                     <CardItem>
                         <CardHeader name='Technical'>
-                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z' />
+                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z' />
                         </CardHeader>
                         <ListBody>
                             <ListCollapse name='HTML' info='Native, JSX' />
@@ -50,10 +50,10 @@ const Home = () => {
                         <ListBox name='denniseum' info='My personal website, utilizing a variety of my technical skills. Relying on Firebase for backend.' />
                         <ListBox name='rfa-coldemailing' info='A Google Apps script that automates publicity emails to increase awareness of a non-profit&apos;s programs.' />
                         <Link to='/projects'>
-                            <li className='transition-colors duration-300 mt-2 hover:cursor-pointer hover:bg-gray-100 py-1 px-3 select-none rounded flex flex-nowrap text-gray-500'>
+                            <li className='transition-colors duration-200 mt-2 hover:cursor-pointer hover:bg-gray-100 py-1 px-3 select-none rounded flex flex-nowrap text-gray-500'>
                                 <span className='text-lg sm:text-xl'>View more projects</span>
                                 <svg className='h-6 w-6 my-auto' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M9 5l7 7-7 7' />
+                                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
                                 </svg>
                             </li>
                         </Link>
