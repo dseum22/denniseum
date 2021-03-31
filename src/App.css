@@ -47,10 +47,6 @@ body {
   @apply bg-white font-sans antialiased text-gray-900;
 }
 
-.link-internal {
-  @apply border-b border-gray-800 text-gray-800 hover:border-gray-600 hover:text-gray-600 transition-colors duration-200;
-}
-
 .form-validate input:invalid,
 .form-validate textarea:invalid {
   @apply border-red-500 focus:ring-red-500 transition-all duration-200;

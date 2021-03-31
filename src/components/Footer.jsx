@@ -1,9 +1,9 @@
 import React from 'react'
-
+import InlineLink from './links/InlineLink'
 const Footer = () => {
     return (
-        <footer className='py-4 md:py-6 flex justify-center sm:justify-between text-gray-600 text-base md:text-lg'>
-            <span className='hidden sm:block'>Built with <a className='link-internal' href='https://reactjs.org/' target='_blank' rel='noreferrer'>React</a> and <a className='link-internal' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a></span>
+        <footer className='py-4 md:py-6 flex justify-center lg:justify-between text-gray-600 text-base sm:text-lg'>
+            <span className='hidden lg:block'>Built with <InlineLink href='https://reactjs.org/'>React</InlineLink> and <InlineLink href='https://tailwindcss.com/'>Tailwind</InlineLink></span>
             <span>&copy; {new Date().getFullYear()} Dennis Eum</span>
         </footer>
     )
