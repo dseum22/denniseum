@@ -8,36 +8,42 @@
     font-weight: 400;
     font-style: normal;
     src: url(./fonts/Inter-Regular.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "Inter";
     font-weight: 400;
     font-style: italic;
     src: url(./fonts/Inter-Italic.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "Inter";
     font-weight: 700;
     font-style: normal;
     src: url(./fonts/Inter-Bold.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "Inter";
     font-weight: 700;
     font-style: italic;
     src: url(./fonts/Inter-BoldItalic.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "Inter";
     font-weight: 300;
     font-style: normal;
     src: url(./fonts/Inter-Light.woff) format("woff");
+    font-display: swap;
   }
   @font-face {
     font-family: "Inter";
     font-weight: 300;
     font-style: italic;
     src: url(./fonts/Inter-LightItalic.woff) format("woff");
+    font-display: swap;
   }
 }
 
