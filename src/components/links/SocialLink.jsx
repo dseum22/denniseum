@@ -3,7 +3,7 @@ import React from 'react'
 const SocialLink = (props) => {
     if (props.circle) {
         return (
-            <a className='border bg-white hover:bg-gray-100 border-gray-400 h-14 w-14 rounded-full focus:outline-none flex justify-center items-center' href={props.href}>
+            <a className='border bg-white hover:bg-gray-100 border-gray-400 h-14 w-14 rounded-full focus:outline-none flex justify-center items-center' href={props.href} target='_blank' rel='noreferrer'>
                 {props.children}
             </a>
         )
