@@ -27,7 +27,7 @@ const ContactBody = () => {
     }, [response])
     useEffect(() => {
         if (opacity) {
-            setTimeout(() => setOpacity(false), 3000)
+            setTimeout(() => setOpacity(false), 1750)
         }
     }, [opacity])
     const randomIntSet = () => [Math.floor(Math.random() * 7), Math.floor(Math.random() * 7)]
@@ -81,7 +81,7 @@ const ContactBody = () => {
     return (
         <>
             <div className='flex justify-between flex-nowrap'>
-                <CardHeader name='Email me'>
+                <CardHeader name='Form'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                 </CardHeader>
                 <div className={`flex flex-nowrap justify-betweenpy-1 px-2 bg-gray-200 rounded font-base transition-opacity duration-200 ${opacity ? '' : 'opacity-0'}`}>
