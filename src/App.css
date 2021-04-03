@@ -50,7 +50,7 @@
 body {
   padding-left: calc((100vw + 80px) / 21);
   padding-right: calc((100vw + 80px) / 21);
-  @apply bg-white font-sans antialiased text-gray-900;
+  @apply bg-white font-sans antialiased text-gray-700;
 }
 
 .form-validate input:invalid,
