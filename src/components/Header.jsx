@@ -16,6 +16,7 @@ const Header = () => {
                         <div className='hidden lg:flex'>
                             <PageLink to='/projects'>Projects</PageLink>
                             <PageLink to='/cello'>Cello</PageLink>
+                            <PageLink to='/blog'>Blog</PageLink>
                             <PageLink to='/contact'>Contact</PageLink>
                         </div>
                     </div>
@@ -33,6 +34,7 @@ const Header = () => {
                 <div className={`lg:hidden ${isOpen ? '' : 'hidden'}`}>
                     <PageLink className='block !pt-0 sm:!pt-1' to='/projects'>Projects</PageLink>
                     <PageLink className='block !pt-0' to='/cello'>Cello</PageLink>
+                    <PageLink className='block !pt-0' to='/blog'>Blog</PageLink>
                     <PageLink className='block !pt-0' to='/contact'>Contact</PageLink>
                 </div>
             </div>
