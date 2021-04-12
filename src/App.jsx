@@ -19,7 +19,7 @@ const App = () => {
         <ScrollToTop />
         <div className='flex flex-col justify-between min-h-screen'>
           <Header />
-          <main className='mt-6 md:mt-8 flex-grow'>
+          <main className='flex-grow'>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/projects' component={Projects} />
