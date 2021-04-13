@@ -10,7 +10,7 @@ const ContactBody = () => {
         ['Error', 'M6 18L18 6M6 6l12 12']
     ]
     const [response, setResponse] = useState(['', ''])
-    const [opacity, setOpacity] = useState(false)
+    const [isOpaque, setIsOpaque] = useState(false)
     const [data, setData] = useState({
         first_name: '',
         last_name: '',
@@ -18,18 +18,18 @@ const ContactBody = () => {
         message: '',
         verify_code: ''
     })
-    const [processing, setProcessing] = useState(false)
+    const [isProcessing, setIsProcessing] = useState(false)
     const [validate, setValidate] = useState(false)
     const verifyCodeRef = useRef(null)
     useEffect(() => {
-        response[0] === '' ? setOpacity(false) : setOpacity(true)
-        return () => setOpacity(false)
+        response[0] === '' ? setIsOpaque(false) : setIsOpaque(true)
+        return () => setIsOpaque(false)
     }, [response])
     useEffect(() => {
-        if (opacity) {
-            setTimeout(() => setOpacity(false), 1750)
+        if (isOpaque) {
+            setTimeout(() => setIsOpaque(false), 1750)
         }
-    }, [opacity])
+    }, [isOpaque])
     const randomIntSet = () => [Math.floor(Math.random() * 7), Math.floor(Math.random() * 7)]
     const [verifySet, setVerifySet] = useState(randomIntSet())
     const handleChange = e => setData({
@@ -43,11 +43,8 @@ const ContactBody = () => {
         } else {
             verifyCodeRef.current.setCustomValidity('')
         }
-        if (!e.target.checkValidity()) {
-            setValidate(true)
-            setResponse(responseError)
-        } else {
-            setProcessing(true)
+        if (e.target.checkValidity()) {
+            setIsProcessing(true)
             const now = DateTime.local().setZone('America/Chicago');
             firebase.firestore().collection('responses').doc(now.toFormat('yyyy-MM-dd hh:mm:ss a')).set({
                 to: atob('ZHNldW0yMkBnbWFpbC5jb20='),
@@ -62,7 +59,7 @@ const ContactBody = () => {
                 }
             }).then(() => {
                 setValidate(false)
-                setProcessing(false)
+                setIsProcessing(false)
                 setData({
                     first_name: '',
                     last_name: '',
@@ -73,9 +70,12 @@ const ContactBody = () => {
                 setVerifySet(randomIntSet())
                 setResponse(responseSuccess)
             }).catch(() => {
-                setProcessing(false)
+                setIsProcessing(false)
                 setResponse(responseError)
-            });
+            })
+        } else {
+            setValidate(true)
+            setResponse(responseError)
         }
     }
     return (
@@ -84,7 +84,7 @@ const ContactBody = () => {
                 <CardHeader name='Form'>
                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' />
                 </CardHeader>
-                <div className={`flex flex-nowrap justify-betweenpy-1 px-2 bg-gray-200 rounded font-base transition-opacity duration-200 ${opacity ? '' : 'opacity-0'}`}>
+                <div className={`flex flex-nowrap justify-betweenpy-1 px-2 bg-gray-200 rounded font-base transition-opacity duration-200 ${isOpaque ? '' : 'opacity-0'}`}>
                     <span className='my-auto text-sm sm:text-base'>{response[0]}</span>
                     <svg className='ml-1 my-auto h-4 w-4' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                         <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d={response[1]} />
@@ -92,7 +92,7 @@ const ContactBody = () => {
                 </div>
             </div>
             <form className={`relative pt-3 mb-3 ${validate ? 'form-validate' : ''}`} onSubmit={handleSubmit} noValidate>
-                <fieldset className='grid grid-cols-1 gap-4 px-1' disabled={processing}>
+                <fieldset className='grid grid-cols-1 gap-4 px-1' disabled={isProcessing}>
                     <div className='grid grid-cols-1 gap-4'>
                         <div>
                             <label className='text-gray-600 text-sm sm:text-base'>Information: What is your personal contact?</label>
