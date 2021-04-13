@@ -41,7 +41,7 @@ const AdminDashboard = () => {
         e.preventDefault()
         if (e.target.checkValidity()) {
             setIsProcessing(true)
-            firebase.firestore().collection('posts').doc(data.name.toLowerCase().split(' ').join('-')).set({
+            firebase.firestore().collection('posts').doc(data.name.toLowerCase().replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '').split(' ').join('-')).set({
                 ...data,
                 timestamp: firebase.firestore.Timestamp.fromDate(new Date()),
                 body: data.body.split('\n\n')
