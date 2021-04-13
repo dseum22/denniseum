@@ -63,7 +63,12 @@ body {
 }
 
 textarea.form-field {
-  min-height: 100px;
+  min-height: 12rem;
+  @apply align-top;
+}
+
+.btn-primary {
+  @apply border border-gray-400 rounded-md w-full py-2 text-xl focus:outline-none;
 }
 
 .btn-toggle {
