@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    src: url(/fonts/Inter/Inter-Regular.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: italic;
+    src: url(/fonts/Inter/Inter-Italic.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    src: url(/fonts/Inter/Inter-Bold.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: italic;
+    src: url(/fonts/Inter/Inter-BoldItalic.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    font-style: normal;
+    src: url(/fonts/Inter/Inter-Light.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    font-style: italic;
+    src: url(/fonts/Inter/Inter-LightItalic.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    font-weight: 400;
+    font-style: normal;
+    src: url(/fonts/ComputerModern/ComputerModern-Regular.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    font-weight: 400;
+    font-style: italic;
+    src: url(/fonts/ComputerModern/ComputerModern-Italic.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    font-weight: 700;
+    font-style: normal;
+    src: url(/fonts/ComputerModern/ComputerModern-Bold.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    font-weight: 700;
+    font-style: italic;
+    src: url(/fonts/ComputerModern/ComputerModern-BoldItalic.woff) format("woff");
+    font-display: swap;
+  }
+}
+
+body {
+  padding-left: calc((100vw + 80px) / 21);
+  padding-right: calc((100vw + 80px) / 21);
+  @apply bg-white font-sans antialiased text-gray-700;
+}
+
+.form-validate input:invalid,
+.form-validate textarea:invalid {
+  @apply border-red-500 focus:ring-red-500 transition-all duration-200;
+}
+
+.form-field {
+  @apply border border-gray-400 rounded-md w-full h-10 sm:h-12 outline-none focus:ring-1 focus:ring-gray-800 focus:border-gray-800 text-lg sm:text-xl p-2 sm:p-3 placeholder-gray-600 transition-all duration-200 disabled:bg-gray-100;
+}
+
+textarea.form-field {
+  min-height: 12rem;
+  @apply align-top;
+}
+
+.btn-primary {
+  @apply border border-gray-400 rounded-md w-full py-2 text-xl focus:outline-none;
+}
+
+.btn-toggle {
+  @apply focus:outline-none;
+}
+
+.btn-toggle span {
+  transform-origin: 1rem 0;
+  @apply block relative transition-all bg-gray-500 h-0.5 rounded-md;
+}
+
+.btn-toggle[aria-expanded="true"] > span:nth-child(1) {
+  @apply transform rotate-45 m-0 translate-x-[0.04rem] translate-y-[0.12rem];
+}
+
+.btn-toggle[aria-expanded="true"] > span:nth-child(2) {
+  @apply transform scale-50 opacity-0 m-0;
+}
+
+.btn-toggle[aria-expanded="true"] > span:nth-child(3) {
+  transform: translate(1px, -2px);
+  @apply transform -rotate-45 w-8 translate-x-[-0.04rem] translate-y-[-0.12rem];
+}

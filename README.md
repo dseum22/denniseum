@@ -2,7 +2,7 @@
 
 ## About
 
-This is my personal website built with React and Tailwind. It is hosted with Firebase, and you can view it at [denniseum.com](https://denniseum.com).
+This is my personal website built with Next and Tailwind. It is hosted with Firebase, and you can view it at [denniseum.com](https://denniseum.com).
 
 ## License
 
