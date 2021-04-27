@@ -4,6 +4,7 @@ import { DateTime } from 'luxon'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import remark from 'remark'
 import remark2react from 'remark-react'
+import strip from 'strip-markdown'
 import MdParagraph from '../../components/markdown/MdParagraph'
 
 const Post = ({ postData }) => {
@@ -28,9 +29,9 @@ const Post = ({ postData }) => {
                 <h1 className='text-3xl sm:text-4xl py-1 font-bold mr-2'>{postData.title}</h1>
                 <div className='text-base sm:text-lg'>
                     <span>Posted on {DateTime.fromISO(postData.date).toFormat('DDD')}</span>
-                    <div className='hidden lg:inline-block'>
+                    <div className='hidden sm:inline-block'>
                         <span className='mx-2'>·</span>
-                        <span>Written listening to {postData.music}</span>
+                        <span>{Math.round(remark().use(strip).processSync(postData.rawContent).toString().split(' ').length/250)} min read</span>
                     </div>
                 </div>
                 <div>
