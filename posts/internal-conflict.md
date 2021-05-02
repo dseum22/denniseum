@@ -1,6 +1,6 @@
 ---
 title: 'Internal Conflict'
-date: '2020-04-25'
+date: '2021-04-25'
 ---
 
 Jealousy. It’s an emotion that I’m all too familiar with, even though I detest it, because it’s so easy to view what others have and wish I had the same. This mindset, as a low-income student, is so much more difficult to avoid because there is a distinguishable socioeconomic division. Considering I go to a private school (under financial aid), I am surrounded constantly by success in which it becomes almost natural to blame my comparative lack of wealth.
