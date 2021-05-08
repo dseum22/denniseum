@@ -30,7 +30,7 @@ const Header = () => {
                         <SocialLink href='https://twitter.com/dseum22/'>Twitter</SocialLink>
                         <SocialLink href='https://github.com/dseum22/'>GitHub</SocialLink>
                     </div>
-                    <button className='lg:hidden h-12 btn-toggle pr-1 sm:pr-2 md:pr-3' type='button' aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
+                    <button className='lg:hidden h-12 btn-toggle mr-1 sm:mr-2 md:mr-3' type='button' aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
                         <span className='mb-2 w-8'></span>
                         <span className='mb-2 w-8'></span>
                         <span className='w-5 ml-auto'></span>
