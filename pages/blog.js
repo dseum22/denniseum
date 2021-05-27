@@ -11,13 +11,13 @@ const Blog = ({ allPostsData }) => {
                 <meta name="robots" content="none"></meta>
                 <link rel="canonical" href="https://denniseum.com/blog"></link>
             </Head>
-            <PageLayout name='Blog'>
-                <p className='text-xl sm:text-2xl'>
+            <PageLayout name="Blog">
+                <p className="text-xl sm:text-2xl">
                     This is a collection of my thoughts and ideas. These are rough drafts of my thinking, so they should be viewed as such.
                 </p>
-                <div className='mt-4 md:mt-6'>
+                <div className="mt-4 md:mt-6">
                     <ListBody>
-                        <div className='grid sm:grid-cols-2'>
+                        <div className="grid sm:grid-cols-2">
                             {allPostsData.map((postData, index) => <ListPost key={index} data={postData} />)}
                         </div>
                     </ListBody>

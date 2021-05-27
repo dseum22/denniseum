@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel="icon" type="image/ico" href="/favicon.ico"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"></link>
-        <link rel="apple-touch-icon" sizes="180x180" href="/src/images/apple-touch-icon.png"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"></link>
         <title>Dennis Eum</title>
         <meta name="author" content="Dennis Eum"></meta>
         <meta name="description"
@@ -34,9 +34,9 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="keywords"
           content="dennis eum, dennis, eum, denniseum.com, dennis eum website, dennis eum personal website, dennis eum minnesota, dennis eum us, dennis eum home page, Dennis Eum, Dennis eum, dennis eum cello"></meta>
       </Head>
-      <div className='flex flex-col justify-between min-h-screen'>
+      <div className="flex flex-col justify-between min-h-screen">
         <Header />
-        <main className='flex-grow mt-4 lg:mt-8'>
+        <main className="flex-grow mt-4 lg:mt-8">
           <Component {...pageProps} />
         </main>
         <Footer />
