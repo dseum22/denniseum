@@ -30,11 +30,13 @@ const Header = () => {
                         <SocialLink href="https://twitter.com/dseum22/">Twitter</SocialLink>
                         <SocialLink href="https://github.com/dseum22/">GitHub</SocialLink>
                     </div>
-                    <button className="lg:hidden h-12 btn-toggle mr-1 sm:mr-2 md:mr-3" type="button" aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
-                        <span className="mb-2 w-8"></span>
-                        <span className="mb-2 w-8"></span>
-                        <span className="w-5 ml-auto"></span>
-                    </button>
+                    <div className="flex items-center justify-center h-12">
+                        <button className="lg:hidden btn-toggle mr-1 sm:mr-2 md:mr-3" type="button" aria-expanded={isOpen} onClick={() => setIsOpen(!isOpen)}>
+                            <span className="mb-2 w-8"></span>
+                            <span className="mb-2 w-8"></span>
+                            <span className="w-5 ml-auto"></span>
+                        </button>
+                    </div>
                 </div>
                 <div className={`lg:hidden ${isOpen ? '' : 'hidden'}`}>
                     <PageLink className="block !pt-0 sm:!pt-1" href="/projects">Projects</PageLink>
