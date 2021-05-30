@@ -12,7 +12,7 @@ import SocialMenu from '../components/SocialMenu'
 fetch('/__/firebase/init.json').then(async response => {
   firebase.initializeApp(await response.json())
   firebase.analytics()
-})
+}).catch(response => console.log(response))
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
