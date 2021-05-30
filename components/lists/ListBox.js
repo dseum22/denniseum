@@ -1,8 +1,9 @@
-import { Children, Fragment, useState } from 'react'
+import { Children, Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 const ListBox = ({ children, href }) => {
     const [open, setOpen] = useState(false)
+    const cancelButtonRef = useRef(false)
     return (
         <>
             <button type="button" className="focus:outline-none" onClick={() => setOpen(true)}>
@@ -20,7 +21,7 @@ const ListBox = ({ children, href }) => {
                 </li>
             </button>
             <Transition.Root show={open} as={Fragment}>
-                <Dialog as="div" static className="fixed z-10 inset-0 overflow-y-auto" open={open} onClose={setOpen}>
+                <Dialog as="div" static className="fixed z-10 inset-0 overflow-y-auto" open={open} onClose={setOpen} initialFocus={cancelButtonRef}>
                     <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-32 text-center sm:block sm:p-0">
                         <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
                             <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
@@ -56,7 +57,7 @@ const ListBox = ({ children, href }) => {
                                     </p>
                                 </div>
                                 <div className="flex items-center justify-center mb-6">
-                                    <button type="button" onClick={() => setOpen(false)} className="border border-gray-300 bg-white transition-colors hover:bg-gray-100 duration-200 h-14 w-14 flex items-center justify-center rounded-full focus:outline-none">
+                                    <button type="button" ref={cancelButtonRef} onClick={() => setOpen(false)} className="border border-gray-300 bg-white transition-colors hover:bg-gray-100 duration-200 h-14 w-14 flex items-center justify-center rounded-full focus:outline-none">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                         </svg>
