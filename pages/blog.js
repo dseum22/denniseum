@@ -16,6 +16,7 @@ const Blog = ({ allPostsData }) => {
                     This is a collection of my thoughts and ideas. These are rough drafts of my thinking, so they should be viewed as such.
                 </p>
                 <div className="mt-4 md:mt-6">
+                    <span className="text-xl sm:text-2xl">{allPostsData.length === 0 ? 'No posts published yet.' : ''}</span>
                     <ListBody>
                         <div className="grid sm:grid-cols-2">
                             {allPostsData.map((postData, index) => <ListPost key={index} data={postData} />)}
