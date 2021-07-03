@@ -24,6 +24,7 @@ const Cello = () => {
                         <ListBody>
                             <ListItem name="Minnesota Orchestra Concerto Performing Invitation (2021)" href="https://minnesotaorchestra.org/about/partnerships/ypsca/concerto-competition/" />
                             <ListItem name="YPSCA Claire Givens Award (2021)" href="https://minnesotaorchestra.org/about/partnerships/ypsca/concerto-competition/" />
+                            <ListItem name="Thursday Musical Artist Series Concert Performing Invitation (2021)" href="https://thursdaymusical.org/calendar/2021/2/8/thursday-musical-artist-series" />
                             <ListItem name="YPSCA Karen Lundmark Award (2020)" href="#" />
                             <ListItem name="Thursday Musical High School Strings: 1st place (2020)" href="https://thursdaymusical.org/scholarship-winners-2020/" />
                             <ListItem name="Salon Se Leve Solo Concerto Performing Invitation (2020)" href="#" />
@@ -31,7 +32,7 @@ const Cello = () => {
                             <ListItem name="Mary West High School Division 1st: place (2020)" href="#" />
                             <ListItem name="Schubert Club Junior High Strings: 1st place (2019)" href="https://schubert.org/blog/2019/03/19/announcing-the-finalists-and-winners-from-the-2019-schubert-club-competition/" />
                             <ListItem name="Thursday Musical Junior High Strings: 2nd place (2019)" href="https://thursdaymusical.org/scholarship-winners-2019/" />
-                            <ListItem name="Mary West Junior High Division: 1st place (2019)" href="https://thursdaymusical.org/scholarship-winners-2019/" />
+                            <ListItem name="Mary West Junior High Division: 1st place (2019)" href="#" />
                         </ListBody>
                     </CardItem>
                     <CardItem>
