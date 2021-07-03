@@ -29,11 +29,11 @@ const Cello = () => {
                             <ListItem name="Thursday Musical High School Strings: 1st place (2020)" href="https://thursdaymusical.org/scholarship-winners-2020/" />
                             <ListItem name="Salon Se Leve Solo Concerto Performing Invitation (2020)" href="#" />
                             <ListItem name="Classical MPR Varsity: Semi-finalist (2020)" href="https://www.classicalmpr.org/story/2020/01/02/minnesota-varsity-dennis-eum/" />
-                            <ListItem name="Mary West High School Division 1st: place (2020)" href="#" />
-                            <ListItem name="GTCYS Cello Concerto Competition Finalist (2020)" href="#" />
                             <ListItem name="Schubert Club Junior High Strings: 1st place (2019)" href="https://schubert.org/blog/2019/03/19/announcing-the-finalists-and-winners-from-the-2019-schubert-club-competition/" />
                             <ListItem name="Thursday Musical Junior High Strings: 2nd place (2019)" href="https://thursdaymusical.org/scholarship-winners-2019/" />
-                            <ListItem name="Mary West Junior High Division: 1st place (2019)" href="#" />
+                            <ListItem name="GTCYS Cello Concerto Competition Finalist (2019)" href="#" />
+                            <ListItem name="Mary West High School Division 1st: place (2019)" href="#" />
+                            <ListItem name="Mary West Junior High Division: 1st place (2018)" href="#" />
                         </ListBody>
                     </CardItem>
                     <CardItem>
