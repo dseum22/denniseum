@@ -23,6 +23,7 @@ const Cello = () => {
                         </CardHeader>
                         <ListBody>
                             <ListItem name="Minnesota Orchestra Concerto Performing Invitation (2021)" href="https://minnesotaorchestra.org/about/partnerships/ypsca/concerto-competition/" />
+                            <ListItem name="YPSCA Edwin W. and Edith B. Norberg Trust Award (2021)" href="https://minnesotaorchestra.org/about/partnerships/ypsca/concerto-competition/" />
                             <ListItem name="YPSCA Claire Givens Award (2021)" href="https://minnesotaorchestra.org/about/partnerships/ypsca/concerto-competition/" />
                             <ListItem name="Thursday Musical Artist Series Concert Performing Invitation (2021)" href="https://thursdaymusical.org/calendar/2021/2/8/thursday-musical-artist-series" />
                             <ListItem name="YPSCA Karen Lundmark Award (2020)" href="#" />
